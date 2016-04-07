@@ -51,50 +51,35 @@
                                                                         handler:@"run"]);
 }
 
-- (void)testPluginPathExists {
+- (void)testWriteToPath {
+    NSString *path = [@"~/Desktop/Plugin" stringByExpandingTildeInPath];
+    [_plugin writeToPath:path];
     BOOL isDirectory;
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:[_plugin pluginPath] isDirectory:&isDirectory]);
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory]);
     XCTAssertTrue(isDirectory);
 }
 
-- (void)testIsContentsPathCorrect {
+- (void)testInjectingFrameworkToPath {
+    NSString *path = [@"~/Plugin" stringByExpandingTildeInPath];
+    [_plugin writeToPath:path];
+
+    NSString *frameworkPath = [@"~/Plugin/Contents/Sketch/PluginHelper.framework" stringByExpandingTildeInPath];
+
     BOOL isDirectory;
-    XCTAssertEqualObjects([[_plugin contentsPath] stringByReplacingOccurrencesOfString:[_plugin pluginPath]
-                                                                            withString:@""], @"/Contents");
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:[_plugin contentsPath] isDirectory:&isDirectory]);
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:frameworkPath isDirectory:&isDirectory]);
     XCTAssertTrue(isDirectory);
 }
 
-- (void)testIsSketchPathCorrect {
-    BOOL isDirectory;
-    XCTAssertEqualObjects([[_plugin sketchPath] stringByReplacingOccurrencesOfString:[_plugin pluginPath]
-                                                                            withString:@""], @"/Contents/Sketch");
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:[_plugin sketchPath] isDirectory:&isDirectory]);
-    XCTAssertTrue(isDirectory);
-}
-
-- (void)testIsManifestPathCorrect {
-    BOOL isDirectory;
-    XCTAssertEqualObjects([[_plugin manifestPath] stringByReplacingOccurrencesOfString:[_plugin pluginPath]
-                                                                            withString:@""], @"/Contents/Sketch/manifest.json");
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:[_plugin manifestPath] isDirectory:&isDirectory]);
-    XCTAssertFalse(isDirectory);
-}
-
-- (void)testInitial {
-    XCTAssertNotNil(_plugin);
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:_plugin.manifestPath]);
-}
-
-- (void)testUpdatingManifestJSON {
-    [_plugin updateManifest:^(Manifest *__autoreleasing *manifest) {
-        [*manifest setVersion:@"2.0"];
-    }];
-    NSData *data = [NSData dataWithContentsOfFile:_plugin.manifestPath];
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
-                                                          options:0
-                                                           error:nil];
-    XCTAssertEqualObjects(json[@"version"], @"2.0");
-}
+//
+//- (void)testUpdatingManifestJSON {
+//    [_plugin updateManifest:^(Manifest *__autoreleasing *manifest) {
+//        [*manifest setVersion:@"2.0"];
+//    }];
+//    NSData *data = [NSData dataWithContentsOfFile:_plugin.manifestPath];
+//    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+//                                                          options:0
+//                                                           error:nil];
+//    XCTAssertEqualObjects(json[@"version"], @"2.0");
+//}
 
 @end

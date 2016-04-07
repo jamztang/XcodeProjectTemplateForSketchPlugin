@@ -1,0 +1,26 @@
+{
+  "build" : "1",
+  "author" : "James Tang",
+  "commands" : [
+    {
+      "script" : "main.js",
+      "handler" : "run",
+      "shortcut" : "cmd shift r",
+      "name" : "Run",
+      "identifier" : "run"
+    }
+  ],
+  "menu" : {
+    "title" : "Plugin",
+    "isRoot" : false,
+    "items" : [
+      "run"
+    ]
+  },
+  "identifier" : "design.magicmirror.Plugin",
+  "version" : "1.0",
+  "description" : "Sketch Plugin Template",
+  "email" : "james@magicmirror.design",
+  "name" : "Plugin",
+  "homepage" : "http://magicmirror.design"
+}

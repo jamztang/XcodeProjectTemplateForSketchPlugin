@@ -12,6 +12,21 @@
 		1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61D61CB6D9A70042E3B0 /* Assets.xcassets */; };
 		1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61D81CB6D9A70042E3B0 /* MainMenu.xib */; };
 		1AAB61E51CB6D9A70042E3B0 /* PluginControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB61E41CB6D9A70042E3B0 /* PluginControllerTests.m */; };
+		1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */; };
+		1AAB61F91CB6DAB90042E3B0 /* PluginHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB61F81CB6DAB90042E3B0 /* PluginHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAB62001CB6DAB90042E3B0 /* PluginHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; };
+		1AAB620B1CB6DAB90042E3B0 /* PluginHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; };
+		1AAB620C1CB6DAB90042E3B0 /* PluginHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AAB621A1CB6DAC80042E3B0 /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62141CB6DAC80042E3B0 /* Command.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAB621B1CB6DAC80042E3B0 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62151CB6DAC80042E3B0 /* Command.m */; };
+		1AAB621C1CB6DAC80042E3B0 /* Manifest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62161CB6DAC80042E3B0 /* Manifest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAB621D1CB6DAC80042E3B0 /* Manifest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62171CB6DAC80042E3B0 /* Manifest.m */; };
+		1AAB621E1CB6DAC80042E3B0 /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62181CB6DAC80042E3B0 /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAB621F1CB6DAC80042E3B0 /* Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62191CB6DAC80042E3B0 /* Plugin.m */; };
+		1AAB62231CB6DAD10042E3B0 /* CommandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62201CB6DAD10042E3B0 /* CommandTests.m */; };
+		1AAB62241CB6DAD10042E3B0 /* ManifestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62211CB6DAD10042E3B0 /* ManifestTests.m */; };
+		1AAB62251CB6DAD10042E3B0 /* PluginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62221CB6DAD10042E3B0 /* PluginTests.m */; };
+		1AAB62281CB6DDAA0042E3B0 /* Plugin.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +37,51 @@
 			remoteGlobalIDString = 1AAB61CC1CB6D9A70042E3B0;
 			remoteInfo = PluginController;
 		};
+		1AAB62011CB6DAB90042E3B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAB61C51CB6D9A70042E3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AAB61F51CB6DAB90042E3B0;
+			remoteInfo = PluginHelper;
+		};
+		1AAB62031CB6DAB90042E3B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAB61C51CB6D9A70042E3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AAB61CC1CB6D9A70042E3B0;
+			remoteInfo = PluginController;
+		};
+		1AAB62091CB6DAB90042E3B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAB61C51CB6D9A70042E3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AAB61F51CB6DAB90042E3B0;
+			remoteInfo = PluginHelper;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1AAB62101CB6DAB90042E3B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AAB620C1CB6DAB90042E3B0 /* PluginHelper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAB62271CB6DC100042E3B0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AAB61CD1CB6D9A70042E3B0 /* PluginController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PluginController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +94,21 @@
 		1AAB61E01CB6D9A70042E3B0 /* PluginControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AAB61E41CB6D9A70042E3B0 /* PluginControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginControllerTests.m; sourceTree = "<group>"; };
 		1AAB61E61CB6D9A70042E3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Plugin.sketchplugin; sourceTree = "<group>"; };
+		1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PluginHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAB61F81CB6DAB90042E3B0 /* PluginHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginHelper.h; sourceTree = "<group>"; };
+		1AAB61FA1CB6DAB90042E3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AAB61FF1CB6DAB90042E3B0 /* PluginHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAB62081CB6DAB90042E3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AAB62141CB6DAC80042E3B0 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		1AAB62151CB6DAC80042E3B0 /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
+		1AAB62161CB6DAC80042E3B0 /* Manifest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manifest.h; sourceTree = "<group>"; };
+		1AAB62171CB6DAC80042E3B0 /* Manifest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manifest.m; sourceTree = "<group>"; };
+		1AAB62181CB6DAC80042E3B0 /* Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
+		1AAB62191CB6DAC80042E3B0 /* Plugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plugin.m; sourceTree = "<group>"; };
+		1AAB62201CB6DAD10042E3B0 /* CommandTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandTests.m; sourceTree = "<group>"; };
+		1AAB62211CB6DAD10042E3B0 /* ManifestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManifestTests.m; sourceTree = "<group>"; };
+		1AAB62221CB6DAD10042E3B0 /* PluginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAB620B1CB6DAB90042E3B0 /* PluginHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +124,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAB61F21CB6DAB90042E3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAB61FC1CB6DAB90042E3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAB62001CB6DAB90042E3B0 /* PluginHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +150,8 @@
 			children = (
 				1AAB61CF1CB6D9A70042E3B0 /* PluginController */,
 				1AAB61E31CB6D9A70042E3B0 /* PluginControllerTests */,
+				1AAB61F71CB6DAB90042E3B0 /* PluginHelper */,
+				1AAB62051CB6DAB90042E3B0 /* PluginHelperTests */,
 				1AAB61CE1CB6D9A70042E3B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +161,8 @@
 			children = (
 				1AAB61CD1CB6D9A70042E3B0 /* PluginController.app */,
 				1AAB61E01CB6D9A70042E3B0 /* PluginControllerTests.xctest */,
+				1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */,
+				1AAB61FF1CB6DAB90042E3B0 /* PluginHelperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +183,7 @@
 		1AAB61D31CB6D9A70042E3B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */,
 				1AAB61D41CB6D9A70042E3B0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -103,7 +198,47 @@
 			path = PluginControllerTests;
 			sourceTree = "<group>";
 		};
+		1AAB61F71CB6DAB90042E3B0 /* PluginHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1AAB61F81CB6DAB90042E3B0 /* PluginHelper.h */,
+				1AAB62141CB6DAC80042E3B0 /* Command.h */,
+				1AAB62151CB6DAC80042E3B0 /* Command.m */,
+				1AAB62161CB6DAC80042E3B0 /* Manifest.h */,
+				1AAB62171CB6DAC80042E3B0 /* Manifest.m */,
+				1AAB62181CB6DAC80042E3B0 /* Plugin.h */,
+				1AAB62191CB6DAC80042E3B0 /* Plugin.m */,
+				1AAB61FA1CB6DAB90042E3B0 /* Info.plist */,
+			);
+			path = PluginHelper;
+			sourceTree = "<group>";
+		};
+		1AAB62051CB6DAB90042E3B0 /* PluginHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				1AAB62201CB6DAD10042E3B0 /* CommandTests.m */,
+				1AAB62211CB6DAD10042E3B0 /* ManifestTests.m */,
+				1AAB62221CB6DAD10042E3B0 /* PluginTests.m */,
+				1AAB62081CB6DAB90042E3B0 /* Info.plist */,
+			);
+			path = PluginHelperTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1AAB61F31CB6DAB90042E3B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAB621A1CB6DAC80042E3B0 /* Command.h in Headers */,
+				1AAB621E1CB6DAC80042E3B0 /* Plugin.h in Headers */,
+				1AAB621C1CB6DAC80042E3B0 /* Manifest.h in Headers */,
+				1AAB61F91CB6DAB90042E3B0 /* PluginHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1AAB61CC1CB6D9A70042E3B0 /* PluginController */ = {
@@ -113,10 +248,13 @@
 				1AAB61C91CB6D9A70042E3B0 /* Sources */,
 				1AAB61CA1CB6D9A70042E3B0 /* Frameworks */,
 				1AAB61CB1CB6D9A70042E3B0 /* Resources */,
+				1AAB62101CB6DAB90042E3B0 /* Embed Frameworks */,
+				1AAB62271CB6DC100042E3B0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1AAB620A1CB6DAB90042E3B0 /* PBXTargetDependency */,
 			);
 			name = PluginController;
 			productName = PluginController;
@@ -141,6 +279,43 @@
 			productReference = 1AAB61E01CB6D9A70042E3B0 /* PluginControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1AAB61F51CB6DAB90042E3B0 /* PluginHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAB620D1CB6DAB90042E3B0 /* Build configuration list for PBXNativeTarget "PluginHelper" */;
+			buildPhases = (
+				1AAB61F11CB6DAB90042E3B0 /* Sources */,
+				1AAB61F21CB6DAB90042E3B0 /* Frameworks */,
+				1AAB61F31CB6DAB90042E3B0 /* Headers */,
+				1AAB61F41CB6DAB90042E3B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginHelper;
+			productName = PluginHelper;
+			productReference = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1AAB61FE1CB6DAB90042E3B0 /* PluginHelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAB62111CB6DAB90042E3B0 /* Build configuration list for PBXNativeTarget "PluginHelperTests" */;
+			buildPhases = (
+				1AAB61FB1CB6DAB90042E3B0 /* Sources */,
+				1AAB61FC1CB6DAB90042E3B0 /* Frameworks */,
+				1AAB61FD1CB6DAB90042E3B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AAB62021CB6DAB90042E3B0 /* PBXTargetDependency */,
+				1AAB62041CB6DAB90042E3B0 /* PBXTargetDependency */,
+			);
+			name = PluginHelperTests;
+			productName = PluginHelperTests;
+			productReference = 1AAB61FF1CB6DAB90042E3B0 /* PluginHelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,6 +329,13 @@
 						CreatedOnToolsVersion = 7.2;
 					};
 					1AAB61DF1CB6D9A70042E3B0 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 1AAB61CC1CB6D9A70042E3B0;
+					};
+					1AAB61F51CB6DAB90042E3B0 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					1AAB61FE1CB6DAB90042E3B0 = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 1AAB61CC1CB6D9A70042E3B0;
 					};
@@ -174,6 +356,8 @@
 			targets = (
 				1AAB61CC1CB6D9A70042E3B0 /* PluginController */,
 				1AAB61DF1CB6D9A70042E3B0 /* PluginControllerTests */,
+				1AAB61F51CB6DAB90042E3B0 /* PluginHelper */,
+				1AAB61FE1CB6DAB90042E3B0 /* PluginHelperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
+				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +377,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAB61F41CB6DAB90042E3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAB61FD1CB6DAB90042E3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAB62281CB6DDAA0042E3B0 /* Plugin.sketchplugin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +415,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AAB61F11CB6DAB90042E3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAB621F1CB6DAC80042E3B0 /* Plugin.m in Sources */,
+				1AAB621D1CB6DAC80042E3B0 /* Manifest.m in Sources */,
+				1AAB621B1CB6DAC80042E3B0 /* Command.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAB61FB1CB6DAB90042E3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAB62241CB6DAD10042E3B0 /* ManifestTests.m in Sources */,
+				1AAB62251CB6DAD10042E3B0 /* PluginTests.m in Sources */,
+				1AAB62231CB6DAD10042E3B0 /* CommandTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -222,6 +442,21 @@
 			isa = PBXTargetDependency;
 			target = 1AAB61CC1CB6D9A70042E3B0 /* PluginController */;
 			targetProxy = 1AAB61E11CB6D9A70042E3B0 /* PBXContainerItemProxy */;
+		};
+		1AAB62021CB6DAB90042E3B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AAB61F51CB6DAB90042E3B0 /* PluginHelper */;
+			targetProxy = 1AAB62011CB6DAB90042E3B0 /* PBXContainerItemProxy */;
+		};
+		1AAB62041CB6DAB90042E3B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AAB61CC1CB6D9A70042E3B0 /* PluginController */;
+			targetProxy = 1AAB62031CB6DAB90042E3B0 /* PBXContainerItemProxy */;
+		};
+		1AAB620A1CB6DAB90042E3B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AAB61F51CB6DAB90042E3B0 /* PluginHelper */;
+			targetProxy = 1AAB62091CB6DAB90042E3B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -366,6 +601,72 @@
 			};
 			name = Release;
 		};
+		1AAB620E1CB6DAB90042E3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PluginHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.PluginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1AAB620F1CB6DAB90042E3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PluginHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.PluginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1AAB62121CB6DAB90042E3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PluginHelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.PluginHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PluginController.app/Contents/MacOS/PluginController";
+			};
+			name = Debug;
+		};
+		1AAB62131CB6DAB90042E3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PluginHelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.PluginHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PluginController.app/Contents/MacOS/PluginController";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,6 +692,22 @@
 			buildConfigurations = (
 				1AAB61ED1CB6D9A70042E3B0 /* Debug */,
 				1AAB61EE1CB6D9A70042E3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1AAB620D1CB6DAB90042E3B0 /* Build configuration list for PBXNativeTarget "PluginHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAB620E1CB6DAB90042E3B0 /* Debug */,
+				1AAB620F1CB6DAB90042E3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1AAB62111CB6DAB90042E3B0 /* Build configuration list for PBXNativeTarget "PluginHelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAB62121CB6DAB90042E3B0 /* Debug */,
+				1AAB62131CB6DAB90042E3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

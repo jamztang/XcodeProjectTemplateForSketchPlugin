@@ -13,6 +13,7 @@
 @interface PluginTests : XCTestCase
 
 @property (nonatomic, strong) Plugin *plugin;
+@property (nonatomic, copy) NSString *output;
 
 @end
 
@@ -23,6 +24,7 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
 
     _plugin = [Plugin pluginWithName:@"Plugin.sketchplugin"];
+    _output = @"~/Desktop/Plugin";
 }
 
 - (void)tearDown {
@@ -52,7 +54,7 @@
 }
 
 - (void)testWriteToPath {
-    NSString *path = [@"~/Desktop/Plugin" stringByExpandingTildeInPath];
+    NSString *path = [_output stringByExpandingTildeInPath];
     [_plugin writeToPath:path];
     BOOL isDirectory;
     XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory]);
@@ -60,15 +62,32 @@
 }
 
 - (void)testInjectingFrameworkToPath {
-    NSString *path = [@"~/Plugin" stringByExpandingTildeInPath];
+    NSString *path = [_output stringByExpandingTildeInPath];
     [_plugin writeToPath:path];
 
-    NSString *frameworkPath = [@"~/Plugin/Contents/Sketch/PluginHelper.framework" stringByExpandingTildeInPath];
+    NSString *frameworkPath = [path stringByAppendingPathComponent:@"/Contents/Sketch/PluginHelper.framework"];
 
     BOOL isDirectory;
     XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:frameworkPath isDirectory:&isDirectory]);
     XCTAssertTrue(isDirectory);
 }
+
+- (void)testInjectingDependancies {
+    NSString *path = [_output stringByExpandingTildeInPath];
+    [_plugin writeToPath:path];
+
+    NSString *helperJS = [path stringByAppendingPathComponent:@"/Contents/Sketch/helper.js"];
+    BOOL helperISDirectory;
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:helperJS isDirectory:&helperISDirectory]);
+    XCTAssertFalse(helperISDirectory);
+
+    NSString *library = [path stringByAppendingPathComponent:@"/Contents/Sketch/SketchLibrary.js"];
+    BOOL libraryIsDirectory;
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:library isDirectory:&libraryIsDirectory]);
+    XCTAssertFalse(helperISDirectory);
+}
+
+//
 
 //
 //- (void)testUpdatingManifestJSON {

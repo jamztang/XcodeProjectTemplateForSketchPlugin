@@ -27,6 +27,8 @@
 		1AAB62241CB6DAD10042E3B0 /* ManifestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62211CB6DAD10042E3B0 /* ManifestTests.m */; };
 		1AAB62251CB6DAD10042E3B0 /* PluginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62221CB6DAD10042E3B0 /* PluginTests.m */; };
 		1AAB62281CB6DDAA0042E3B0 /* Plugin.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */; };
+		1AAB62301CB6F3690042E3B0 /* helper.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622E1CB6F3690042E3B0 /* helper.js */; };
+		1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		1AAB62201CB6DAD10042E3B0 /* CommandTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandTests.m; sourceTree = "<group>"; };
 		1AAB62211CB6DAD10042E3B0 /* ManifestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManifestTests.m; sourceTree = "<group>"; };
 		1AAB62221CB6DAD10042E3B0 /* PluginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginTests.m; sourceTree = "<group>"; };
+		1AAB622E1CB6F3690042E3B0 /* helper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = helper.js; sourceTree = "<group>"; };
+		1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SketchLibrary.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 		1AAB61D31CB6D9A70042E3B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AAB622E1CB6F3690042E3B0 /* helper.js */,
+				1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */,
 				1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */,
 				1AAB61D41CB6D9A70042E3B0 /* main.m */,
 			);
@@ -367,6 +373,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
+				1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,

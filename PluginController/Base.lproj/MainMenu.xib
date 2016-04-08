@@ -14,7 +14,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="codeTextField" destination="wcZ-Nz-lM1" id="Cnm-MK-8ya"/>
+                <outlet property="codeTextField" destination="wcZ-Nz-lM1" id="pUI-hZ-724"/>
+                <outlet property="targetComboBox" destination="8qr-uu-30g" id="LeP-Cr-fU3"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -750,6 +751,19 @@ var run = function(context) {
                             <action selector="executeButtonDidPress:" target="Voe-Tx-rLC" id="7aV-Bw-oFO"/>
                         </connections>
                     </button>
+                    <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qr-uu-30g">
+                        <rect key="frame" x="284" y="12" width="99" height="26"/>
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Sketch" drawsBackground="YES" numberOfVisibleItems="5" id="9wD-0u-QRI">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <objectValues>
+                                <string>Sketch</string>
+                                <string>Sketch Beta</string>
+                                <string>Sketch Hamburg</string>
+                            </objectValues>
+                        </comboBoxCell>
+                    </comboBox>
                 </subviews>
             </view>
             <point key="canvasLocation" x="469" y="268.5"/>

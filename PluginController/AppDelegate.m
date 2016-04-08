@@ -19,12 +19,14 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
 
-
-
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+- (IBAction)logToConsoleButtonDidPress:(id)sender {
+    [COScript execute:@"logToConsole.js"];
+}
+
+- (IBAction)showMessageButtonDidPress:(id)sender {
+    [COScript execute:@"showMessage.js"];
 }
 
 @end

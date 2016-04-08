@@ -29,6 +29,13 @@
 		1AAB62281CB6DDAA0042E3B0 /* Plugin.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */; };
 		1AAB62301CB6F3690042E3B0 /* helper.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622E1CB6F3690042E3B0 /* helper.js */; };
 		1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */; };
+		1AAB62351CB705D10042E3B0 /* coscript in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62341CB705D10042E3B0 /* coscript */; };
+		1AAB62371CB706EC0042E3B0 /* logToConsole.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62361CB706EC0042E3B0 /* logToConsole.js */; };
+		1AAB623E1CB70CE20042E3B0 /* NSString+Binary.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB623C1CB70CE20042E3B0 /* NSString+Binary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAB623F1CB70CE20042E3B0 /* NSString+Binary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB623D1CB70CE20042E3B0 /* NSString+Binary.m */; };
+		1AAB62421CB7168B0042E3B0 /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62401CB7168B0042E3B0 /* COScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAB62431CB7168B0042E3B0 /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62411CB7168B0042E3B0 /* COScript.m */; };
+		1AAB62451CB78A190042E3B0 /* showMessage.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62441CB78A190042E3B0 /* showMessage.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +120,13 @@
 		1AAB62221CB6DAD10042E3B0 /* PluginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginTests.m; sourceTree = "<group>"; };
 		1AAB622E1CB6F3690042E3B0 /* helper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = helper.js; sourceTree = "<group>"; };
 		1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SketchLibrary.js; sourceTree = "<group>"; };
+		1AAB62341CB705D10042E3B0 /* coscript */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = coscript; sourceTree = "<group>"; };
+		1AAB62361CB706EC0042E3B0 /* logToConsole.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = logToConsole.js; sourceTree = "<group>"; };
+		1AAB623C1CB70CE20042E3B0 /* NSString+Binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Binary.h"; sourceTree = "<group>"; };
+		1AAB623D1CB70CE20042E3B0 /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Binary.m"; sourceTree = "<group>"; };
+		1AAB62401CB7168B0042E3B0 /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
+		1AAB62411CB7168B0042E3B0 /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
+		1AAB62441CB78A190042E3B0 /* showMessage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = showMessage.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,10 +201,13 @@
 		1AAB61D31CB6D9A70042E3B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AAB62341CB705D10042E3B0 /* coscript */,
 				1AAB622E1CB6F3690042E3B0 /* helper.js */,
 				1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */,
 				1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */,
 				1AAB61D41CB6D9A70042E3B0 /* main.m */,
+				1AAB62361CB706EC0042E3B0 /* logToConsole.js */,
+				1AAB62441CB78A190042E3B0 /* showMessage.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -208,6 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				1AAB61F81CB6DAB90042E3B0 /* PluginHelper.h */,
+				1AAB623C1CB70CE20042E3B0 /* NSString+Binary.h */,
+				1AAB623D1CB70CE20042E3B0 /* NSString+Binary.m */,
+				1AAB62401CB7168B0042E3B0 /* COScript.h */,
+				1AAB62411CB7168B0042E3B0 /* COScript.m */,
 				1AAB62141CB6DAC80042E3B0 /* Command.h */,
 				1AAB62151CB6DAC80042E3B0 /* Command.m */,
 				1AAB62161CB6DAC80042E3B0 /* Manifest.h */,
@@ -238,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAB621A1CB6DAC80042E3B0 /* Command.h in Headers */,
+				1AAB62421CB7168B0042E3B0 /* COScript.h in Headers */,
 				1AAB621E1CB6DAC80042E3B0 /* Plugin.h in Headers */,
 				1AAB621C1CB6DAC80042E3B0 /* Manifest.h in Headers */,
+				1AAB623E1CB70CE20042E3B0 /* NSString+Binary.h in Headers */,
 				1AAB61F91CB6DAB90042E3B0 /* PluginHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,8 +399,11 @@
 				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
 				1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
+				1AAB62451CB78A190042E3B0 /* showMessage.js in Resources */,
+				1AAB62351CB705D10042E3B0 /* coscript in Resources */,
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
+				1AAB62371CB706EC0042E3B0 /* logToConsole.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +453,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAB623F1CB70CE20042E3B0 /* NSString+Binary.m in Sources */,
 				1AAB621F1CB6DAC80042E3B0 /* Plugin.m in Sources */,
 				1AAB621D1CB6DAC80042E3B0 /* Manifest.m in Sources */,
+				1AAB62431CB7168B0042E3B0 /* COScript.m in Sources */,
 				1AAB621B1CB6DAC80042E3B0 /* Command.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

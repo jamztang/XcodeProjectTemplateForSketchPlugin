@@ -17,5 +17,4 @@ FOUNDATION_EXPORT const unsigned char PluginHelperVersionString[];
 #import <PluginHelper/Manifest.h>
 #import <PluginHelper/Plugin.h>
 #import <PluginHelper/Command.h>
-#import <PluginHelper/NSString+Binary.h>
-#import <PluginHelper/COScript.h>
+#import <PluginHelper/CMD.h>

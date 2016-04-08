@@ -30,13 +30,11 @@
 		1AAB62301CB6F3690042E3B0 /* helper.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622E1CB6F3690042E3B0 /* helper.js */; };
 		1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */; };
 		1AAB62351CB705D10042E3B0 /* coscript in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62341CB705D10042E3B0 /* coscript */; };
-		1AAB623E1CB70CE20042E3B0 /* NSString+Binary.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB623C1CB70CE20042E3B0 /* NSString+Binary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AAB623F1CB70CE20042E3B0 /* NSString+Binary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB623D1CB70CE20042E3B0 /* NSString+Binary.m */; };
-		1AAB62421CB7168B0042E3B0 /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62401CB7168B0042E3B0 /* COScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AAB62431CB7168B0042E3B0 /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62411CB7168B0042E3B0 /* COScript.m */; };
 		1AAB62471CB7B1910042E3B0 /* COScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62461CB7B1910042E3B0 /* COScriptTests.m */; };
 		1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62481CB7E4390042E3B0 /* codeToRun.js */; };
 		1AAB624D1CB85A3A0042E3B0 /* snippets_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */; };
+		1AAB62531CB865010042E3B0 /* CMD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62511CB865010042E3B0 /* CMD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAB62541CB865010042E3B0 /* CMD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62521CB865010042E3B0 /* CMD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,13 +120,11 @@
 		1AAB622E1CB6F3690042E3B0 /* helper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = helper.js; sourceTree = "<group>"; };
 		1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SketchLibrary.js; sourceTree = "<group>"; };
 		1AAB62341CB705D10042E3B0 /* coscript */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = coscript; sourceTree = "<group>"; };
-		1AAB623C1CB70CE20042E3B0 /* NSString+Binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Binary.h"; sourceTree = "<group>"; };
-		1AAB623D1CB70CE20042E3B0 /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Binary.m"; sourceTree = "<group>"; };
-		1AAB62401CB7168B0042E3B0 /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
-		1AAB62411CB7168B0042E3B0 /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
 		1AAB62461CB7B1910042E3B0 /* COScriptTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScriptTests.m; sourceTree = "<group>"; };
 		1AAB62481CB7E4390042E3B0 /* codeToRun.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = codeToRun.js; sourceTree = "<group>"; };
 		1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = snippets_default.plist; sourceTree = "<group>"; };
+		1AAB62511CB865010042E3B0 /* CMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD.h; sourceTree = "<group>"; };
+		1AAB62521CB865010042E3B0 /* CMD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,10 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				1AAB61F81CB6DAB90042E3B0 /* PluginHelper.h */,
-				1AAB623C1CB70CE20042E3B0 /* NSString+Binary.h */,
-				1AAB623D1CB70CE20042E3B0 /* NSString+Binary.m */,
-				1AAB62401CB7168B0042E3B0 /* COScript.h */,
-				1AAB62411CB7168B0042E3B0 /* COScript.m */,
+				1AAB62511CB865010042E3B0 /* CMD.h */,
+				1AAB62521CB865010042E3B0 /* CMD.m */,
 				1AAB62141CB6DAC80042E3B0 /* Command.h */,
 				1AAB62151CB6DAC80042E3B0 /* Command.m */,
 				1AAB62161CB6DAC80042E3B0 /* Manifest.h */,
@@ -262,11 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAB621A1CB6DAC80042E3B0 /* Command.h in Headers */,
-				1AAB62421CB7168B0042E3B0 /* COScript.h in Headers */,
 				1AAB621E1CB6DAC80042E3B0 /* Plugin.h in Headers */,
 				1AAB621C1CB6DAC80042E3B0 /* Manifest.h in Headers */,
-				1AAB623E1CB70CE20042E3B0 /* NSString+Binary.h in Headers */,
 				1AAB61F91CB6DAB90042E3B0 /* PluginHelper.h in Headers */,
+				1AAB62531CB865010042E3B0 /* CMD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,10 +449,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AAB623F1CB70CE20042E3B0 /* NSString+Binary.m in Sources */,
+				1AAB62541CB865010042E3B0 /* CMD.m in Sources */,
 				1AAB621F1CB6DAC80042E3B0 /* Plugin.m in Sources */,
 				1AAB621D1CB6DAC80042E3B0 /* Manifest.m in Sources */,
-				1AAB62431CB7168B0042E3B0 /* COScript.m in Sources */,
 				1AAB621B1CB6DAC80042E3B0 /* Command.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

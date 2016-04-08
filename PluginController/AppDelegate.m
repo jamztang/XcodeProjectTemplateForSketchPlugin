@@ -16,6 +16,7 @@
 @property (weak) IBOutlet NSTextField *codeTextField;
 @property (weak) IBOutlet NSWindow *window;
 
+@property (nonatomic, strong) CMD *command;
 @property (nonatomic, strong) NSMutableDictionary *snippets;
 @property (nonatomic, strong) NSMutableArray *snippetsName;
 @property (nonatomic, copy) NSString *selectedSnippet;
@@ -28,6 +29,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
 
+    _command = [[CMD alloc] init];
     _selectedSnippet = nil;
     self.snippetCombobox.delegate = self;
     self.snippetCombobox.usesDataSource = YES;
@@ -44,14 +46,6 @@
     self.snippets = [([defaults count] == 0 ? snippets : defaults) mutableCopy];
 
     [self reloadData];
-}
-
-- (IBAction)logToConsoleButtonDidPress:(id)sender {
-    [COScript execute:@"logToConsole.js"];
-}
-
-- (IBAction)showMessageButtonDidPress:(id)sender {
-    [COScript execute:@"showMessage.js"];
 }
 
 - (IBAction)executeButtonDidPress:(id)sender {
@@ -72,7 +66,7 @@
     [data writeToFile:output
            atomically:YES];
 
-    [COScript execute:@"Untitled.js"];
+    [_command exec:@"coscript Untitled.js"];
     [self save];
 }
 

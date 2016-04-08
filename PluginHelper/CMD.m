@@ -8,12 +8,19 @@
 
 #import "CMD.h"
 
+@interface CMD ()
+
+@property (nonatomic, copy) NSString *exports;
+
+@end
+
 @implementation CMD
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        self.exports = @"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin";
         self.cd = [[NSBundle mainBundle] resourcePath];
     }
     return self;
@@ -27,9 +34,17 @@
     NSArray *tokens = [command componentsSeparatedByString:@" "];
     NSString *binary = [tokens firstObject];
 
+    NSArray *exports = [_exports componentsSeparatedByString:@":"];
+    exports = [exports arrayByAddingObject:self.cd];
+
     NSTask *task = [[NSTask alloc] init];
-    NSString *filePath = [self.cd stringByAppendingPathComponent:binary];
-    [task setLaunchPath:filePath];
+    [exports enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *path = [obj stringByAppendingPathComponent:binary];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            [task setLaunchPath:path];
+            *stop = YES;
+        }
+    }];
     [task setCurrentDirectoryPath:self.cd];
     if ([tokens count] >= 2) {
         [task setArguments:[tokens subarrayWithRange:NSMakeRange(1, [tokens count] - 1)]];

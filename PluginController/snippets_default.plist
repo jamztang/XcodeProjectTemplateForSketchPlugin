@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>showMessage</key>
+	<string>context.document.showMessage(&quot;someMessage&quot;)</string>
+	<key>_default</key>
+	<string>log(&apos;This is an example Sketch script.&apos;);
+
+var documentName = context.document.displayName();
+log(&apos;The current document is named: &apos; + documentName);
+
+var selectedLayers = context.selection;
+var selectedCount = selectedLayers.count();
+
+if (selectedCount == 0) {
+  log(&apos;No layers are selected.&apos;);
+} else {
+  log(&apos;Selected layers:&apos;);
+  for (var i = 0; i &lt; selectedCount; i++) {
+    var layer = selectedLayers[i];
+    log((i+1) + &apos;. &apos; + layer.name());
+  }
+};</string>
+	<key>for</key>
+	<string>for (var i = 0; i &lt; 10; i++) {
+   log(i)
+}</string>
+	<key>function</key>
+	<string>function run(context) {
+     log(context)
+}
+
+run(context)</string>
+	<key>import</key>
+	<string>@import &apos;./helper.js&apos;</string>
+	<key>log</key>
+	<string>log(&quot;logasldfjalskdf&quot;)
+</string>
+</dict>
+</plist>

@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="codeTextField" destination="wcZ-Nz-lM1" id="pUI-hZ-724"/>
+                <outlet property="snippetCombobox" destination="RdR-HM-UKt" id="Uet-XH-cXJ"/>
                 <outlet property="targetComboBox" destination="8qr-uu-30g" id="LeP-Cr-fU3"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -672,14 +673,14 @@
         <window title="PluginController" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="385"/>
+            <rect key="contentRect" x="335" y="390" width="546" height="385"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="385"/>
+                <rect key="frame" x="0.0" y="0.0" width="546" height="385"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MRF-fe-wQk">
-                        <rect key="frame" x="20" y="213" width="445" height="152"/>
+                        <rect key="frame" x="20" y="263" width="512" height="102"/>
                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ddc-ar-2Ui">
                             <font key="font" metaFont="system"/>
                             <string key="title">The following files are installed. Please do not manually edit it.
@@ -702,28 +703,8 @@ var run = function(context) {
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7aU-vB-Mv6">
-                        <rect key="frame" x="14" y="9" width="134" height="32"/>
-                        <buttonCell key="cell" type="push" title="Log To Console" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RsC-yk-sYj">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <connections>
-                                <action selector="logToConsoleButtonDidPress:" target="Voe-Tx-rLC" id="7Vn-NM-Frb"/>
-                            </connections>
-                        </buttonCell>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTJ-pv-Z8B">
-                        <rect key="frame" x="148" y="9" width="132" height="32"/>
-                        <buttonCell key="cell" type="push" title="Show Message" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Kb-sx-UW8">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="showMessageButtonDidPress:" target="Voe-Tx-rLC" id="nYY-HM-lRC"/>
-                        </connections>
-                    </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcZ-Nz-lM1">
-                        <rect key="frame" x="20" y="50" width="445" height="153"/>
+                        <rect key="frame" x="20" y="50" width="512" height="198"/>
                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="T7s-se-lW4">
                             <font key="font" metaFont="system"/>
                             <string key="title">log("message");
@@ -742,7 +723,7 @@ var run = function(context) {
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-sg-Rs8">
-                        <rect key="frame" x="382" y="9" width="89" height="32"/>
+                        <rect key="frame" x="449" y="9" width="89" height="32"/>
                         <buttonCell key="cell" type="push" title="Execute" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dd4-1l-GZr">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -752,7 +733,7 @@ var run = function(context) {
                         </connections>
                     </button>
                     <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qr-uu-30g">
-                        <rect key="frame" x="284" y="12" width="99" height="26"/>
+                        <rect key="frame" x="329" y="12" width="121" height="26"/>
                         <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Sketch" drawsBackground="YES" numberOfVisibleItems="5" id="9wD-0u-QRI">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -764,9 +745,42 @@ var run = function(context) {
                             </objectValues>
                         </comboBoxCell>
                     </comboBox>
+                    <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-HM-UKt">
+                        <rect key="frame" x="20" y="13" width="118" height="26"/>
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="9o3-dM-YSn">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <objectValues>
+                                <string>Item 1</string>
+                                <string>Item 2</string>
+                                <string>Item 3</string>
+                            </objectValues>
+                        </comboBoxCell>
+                    </comboBox>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syp-Nc-EyK">
+                        <rect key="frame" x="203" y="9" width="80" height="32"/>
+                        <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HFT-8R-Tmf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="deleteButtonDidPress:" target="Voe-Tx-rLC" id="3P6-in-ZiH"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeI-lX-IxO">
+                        <rect key="frame" x="137" y="9" width="70" height="32"/>
+                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uKK-mL-bnS">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveButtonDidPress:" target="Voe-Tx-rLC" id="Jqe-PZ-V8a"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="469" y="268.5"/>
+            <point key="canvasLocation" x="502" y="268.5"/>
         </window>
     </objects>
 </document>

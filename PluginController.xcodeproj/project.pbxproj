@@ -36,6 +36,7 @@
 		1AAB62421CB7168B0042E3B0 /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62401CB7168B0042E3B0 /* COScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB62431CB7168B0042E3B0 /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62411CB7168B0042E3B0 /* COScript.m */; };
 		1AAB62451CB78A190042E3B0 /* showMessage.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62441CB78A190042E3B0 /* showMessage.js */; };
+		1AAB62471CB7B1910042E3B0 /* COScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62461CB7B1910042E3B0 /* COScriptTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		1AAB62401CB7168B0042E3B0 /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
 		1AAB62411CB7168B0042E3B0 /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
 		1AAB62441CB78A190042E3B0 /* showMessage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = showMessage.js; sourceTree = "<group>"; };
+		1AAB62461CB7B1910042E3B0 /* COScriptTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScriptTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				1AAB62201CB6DAD10042E3B0 /* CommandTests.m */,
+				1AAB62461CB7B1910042E3B0 /* COScriptTests.m */,
 				1AAB62211CB6DAD10042E3B0 /* ManifestTests.m */,
 				1AAB62221CB6DAD10042E3B0 /* PluginTests.m */,
 				1AAB62081CB6DAB90042E3B0 /* Info.plist */,
@@ -465,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAB62471CB7B1910042E3B0 /* COScriptTests.m in Sources */,
 				1AAB62241CB6DAD10042E3B0 /* ManifestTests.m in Sources */,
 				1AAB62251CB6DAD10042E3B0 /* PluginTests.m in Sources */,
 				1AAB62231CB6DAD10042E3B0 /* CommandTests.m in Sources */,

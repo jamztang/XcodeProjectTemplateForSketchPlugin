@@ -11,7 +11,9 @@
 
 @interface AppDelegate ()
 
+@property (weak) IBOutlet NSTextField *codeTextField;
 @property (weak) IBOutlet NSWindow *window;
+
 @end
 
 @implementation AppDelegate
@@ -27,6 +29,21 @@
 
 - (IBAction)showMessageButtonDidPress:(id)sender {
     [COScript execute:@"showMessage.js"];
+}
+
+- (IBAction)executeButtonDidPress:(id)sender {
+    NSString *code = _codeTextField.cell.title;
+
+    code = [code stringByReplacingOccurrencesOfString:@"\n" withString:@"\\\n"];
+    code = [code stringByReplacingOccurrencesOfString:@"\"" withString:@"'"];
+    code = [NSString stringWithFormat:@"%@\n\"%@\"\n%@", @"var codeToRun = ", code, @";\nvar sketchApp = COScript.app(\"Sketch\")\n sketchApp.delegate().runPluginScript_name(codeToRun, \"coscript Demo\")"];
+
+    NSData *data = [code dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *output = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Untitled.js"];
+    [data writeToFile:output
+           atomically:YES];
+
+    [COScript execute:@"Untitled.js"];
 }
 
 @end

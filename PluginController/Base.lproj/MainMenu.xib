@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="codeTextField" destination="wcZ-Nz-lM1" id="Cnm-MK-8ya"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -677,7 +678,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MRF-fe-wQk">
-                        <rect key="frame" x="20" y="45" width="445" height="320"/>
+                        <rect key="frame" x="20" y="213" width="445" height="152"/>
                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ddc-ar-2Ui">
                             <font key="font" metaFont="system"/>
                             <string key="title">The following files are installed. Please do not manually edit it.
@@ -718,6 +719,31 @@ var run = function(context) {
                         </buttonCell>
                         <connections>
                             <action selector="showMessageButtonDidPress:" target="Voe-Tx-rLC" id="nYY-HM-lRC"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcZ-Nz-lM1">
+                        <rect key="frame" x="20" y="51" width="445" height="152"/>
+                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="T7s-se-lW4">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">@import 'helper.js'
+
+var run = function(context) {
+    loadFramework("PluginHelper");
+    var plugin = Plugin.alloc().init();
+    log(plugin.manifest());
+}</string>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-sg-Rs8">
+                        <rect key="frame" x="382" y="9" width="89" height="32"/>
+                        <buttonCell key="cell" type="push" title="Execute" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dd4-1l-GZr">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="executeButtonDidPress:" target="Voe-Tx-rLC" id="7aV-Bw-oFO"/>
                         </connections>
                     </button>
                 </subviews>

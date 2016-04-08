@@ -84,7 +84,18 @@
     NSString *library = [path stringByAppendingPathComponent:@"/Contents/Sketch/SketchLibrary.js"];
     BOOL libraryIsDirectory;
     XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:library isDirectory:&libraryIsDirectory]);
-    XCTAssertFalse(helperISDirectory);
+    XCTAssertFalse(libraryIsDirectory);
+
+    NSString *untitled = [path stringByAppendingPathComponent:@"/Contents/Sketch/Untitled.js"];
+    BOOL untitledIsDirectory;
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:untitled isDirectory:&untitledIsDirectory]);
+    XCTAssertFalse(untitledIsDirectory);
+
+    NSString *codeToRun = [path stringByAppendingPathComponent:@"/Contents/Sketch/runAsCommandTemplate.js"];
+    BOOL codeToRunIsDirectory;
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:codeToRun isDirectory:&codeToRunIsDirectory]);
+    XCTAssertFalse(codeToRunIsDirectory);
+
 }
 
 //

@@ -8,7 +8,13 @@
       "shortcut" : "cmd shift r",
       "name" : "Run",
       "identifier" : "run"
-    }
+    },
+        {
+          "script" : "runAsCommand.js",
+          "handler" : "onRun",
+          "name" : "runAsCommand",
+          "identifier" : "runAsCommand"
+        }
   ],
   "menu" : {
     "title" : "Plugin",

@@ -33,17 +33,50 @@
 
 - (IBAction)executeButtonDidPress:(id)sender {
     NSString *code = _codeTextField.cell.title;
-
+    code = [code stringByReplacingOccurrencesOfString:@"./" withString:[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/"]];
     code = [code stringByReplacingOccurrencesOfString:@"\n" withString:@"\\\n"];
     code = [code stringByReplacingOccurrencesOfString:@"\"" withString:@"'"];
-    code = [NSString stringWithFormat:@"%@\n\"%@\"\n%@", @"var codeToRun = ", code, @";\nvar sketchApp = COScript.app(\"Sketch\")\n sketchApp.delegate().runPluginScript_name(codeToRun, \"coscript Demo\")"];
 
-    NSData *data = [code dataUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"File generated at `%@`", [[NSBundle mainBundle] pathForResource:@"Untitled.js" ofType:nil]);
+    NSString *template = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"codeToRun.js" ofType:nil]
+                                               usedEncoding:nil
+                                                      error:nil];
+
+    NSString *merged = [NSString stringWithFormat:template, code];
+
+    NSData *data = [merged dataUsingEncoding:NSUTF8StringEncoding];
     NSString *output = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Untitled.js"];
     [data writeToFile:output
            atomically:YES];
 
     [COScript execute:@"Untitled.js"];
+}
+
+
+- (IBAction)commandButtonDidPress:(id)sender {
+    {
+        NSString *code = _codeTextField.cell.title;
+        code = [code stringByReplacingOccurrencesOfString:@"./" withString:[[NSBundle mainBundle] resourcePath]];
+        NSData *data = [code dataUsingEncoding:NSUTF8StringEncoding];
+        NSString *output = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Untitled.js"];
+        [data writeToFile:output
+               atomically:YES];
+        NSLog(@"File generated at `%@`", [[NSBundle mainBundle] pathForResource:@"Untitled.js" ofType:nil]);
+    }
+
+    {
+        NSString *template = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"runAsCommandTemplate.js" ofType:nil]
+                                                   usedEncoding:nil
+                                                          error:nil];
+        NSString *toExecute = [NSString stringWithFormat:template, [[NSBundle mainBundle] pathForResource:@"Plugin.sketchplugin" ofType:nil]];
+        NSString *output = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"runAsCommand.js"];
+        NSData *data = [toExecute dataUsingEncoding:NSUTF8StringEncoding];
+        [data writeToFile:output
+               atomically:YES];
+        NSLog(@"File generated at `%@`", [[NSBundle mainBundle] pathForResource:@"runAsCommand.js" ofType:nil]);
+    }
+
+    [COScript execute:@"runAsCommand.js"];
 }
 
 @end

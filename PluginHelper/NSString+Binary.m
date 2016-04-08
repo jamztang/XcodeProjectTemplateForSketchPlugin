@@ -17,7 +17,7 @@
     [task setCurrentDirectoryPath:self];
     [task setArguments:arguments];
 
-//    NSLog(@"filePath %@", filePath);
+    NSLog(@"currentDir %@", self);
     [task launch];
     [task waitUntilExit];
 }

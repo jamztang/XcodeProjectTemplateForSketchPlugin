@@ -37,6 +37,8 @@
 		1AAB62431CB7168B0042E3B0 /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62411CB7168B0042E3B0 /* COScript.m */; };
 		1AAB62451CB78A190042E3B0 /* showMessage.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62441CB78A190042E3B0 /* showMessage.js */; };
 		1AAB62471CB7B1910042E3B0 /* COScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62461CB7B1910042E3B0 /* COScriptTests.m */; };
+		1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62481CB7E4390042E3B0 /* codeToRun.js */; };
+		1AAB624B1CB7EE2F0042E3B0 /* runAsCommandTemplate.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB624A1CB7EE2F0042E3B0 /* runAsCommandTemplate.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,8 @@
 		1AAB62411CB7168B0042E3B0 /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
 		1AAB62441CB78A190042E3B0 /* showMessage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = showMessage.js; sourceTree = "<group>"; };
 		1AAB62461CB7B1910042E3B0 /* COScriptTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScriptTests.m; sourceTree = "<group>"; };
+		1AAB62481CB7E4390042E3B0 /* codeToRun.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = codeToRun.js; sourceTree = "<group>"; };
+		1AAB624A1CB7EE2F0042E3B0 /* runAsCommandTemplate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = runAsCommandTemplate.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 				1AAB61D41CB6D9A70042E3B0 /* main.m */,
 				1AAB62361CB706EC0042E3B0 /* logToConsole.js */,
 				1AAB62441CB78A190042E3B0 /* showMessage.js */,
+				1AAB62481CB7E4390042E3B0 /* codeToRun.js */,
+				1AAB624A1CB7EE2F0042E3B0 /* runAsCommandTemplate.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -402,10 +408,12 @@
 				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
 				1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
+				1AAB624B1CB7EE2F0042E3B0 /* runAsCommandTemplate.js in Resources */,
 				1AAB62451CB78A190042E3B0 /* showMessage.js in Resources */,
 				1AAB62351CB705D10042E3B0 /* coscript in Resources */,
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
+				1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */,
 				1AAB62371CB706EC0042E3B0 /* logToConsole.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

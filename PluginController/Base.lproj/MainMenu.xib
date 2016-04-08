@@ -722,16 +722,20 @@ var run = function(context) {
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcZ-Nz-lM1">
-                        <rect key="frame" x="20" y="51" width="445" height="152"/>
+                        <rect key="frame" x="20" y="50" width="445" height="153"/>
                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="T7s-se-lW4">
                             <font key="font" metaFont="system"/>
-                            <string key="title">@import 'helper.js'
+                            <string key="title">log("message");
+context.document.showMessage("something");
+log(context);
+
+/*@import './helper.js'
 
 var run = function(context) {
     loadFramework("PluginHelper");
     var plugin = Plugin.alloc().init();
     log(plugin.manifest());
-}</string>
+}*/</string>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>

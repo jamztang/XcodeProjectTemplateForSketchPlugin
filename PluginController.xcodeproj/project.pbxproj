@@ -29,7 +29,6 @@
 		1AAB62351CB705D10042E3B0 /* coscript in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62341CB705D10042E3B0 /* coscript */; };
 		1AAB62471CB7B1910042E3B0 /* COScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62461CB7B1910042E3B0 /* COScriptTests.m */; };
 		1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62481CB7E4390042E3B0 /* codeToRun.js */; };
-		1AAB624D1CB85A3A0042E3B0 /* snippets_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */; };
 		1AAB62531CB865010042E3B0 /* CMD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62511CB865010042E3B0 /* CMD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB62541CB865010042E3B0 /* CMD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62521CB865010042E3B0 /* CMD.m */; };
 		1ACF94E81CB8EA4700CBADCD /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF94E61CB8EA4700CBADCD /* COScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +45,7 @@
 		1ACF95871CB910C900CBADCD /* SketchSnippetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95851CB910C900CBADCD /* SketchSnippetsViewController.h */; };
 		1ACF95881CB910C900CBADCD /* SketchSnippetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95861CB910C900CBADCD /* SketchSnippetsViewController.m */; };
 		1ACF958A1CB91AF000CBADCD /* Untitled.js in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95891CB91AF000CBADCD /* Untitled.js */; };
+		1ACF958C1CB9202D00CBADCD /* snippets_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF958B1CB9202D00CBADCD /* snippets_default.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +154,6 @@
 		1AAB62341CB705D10042E3B0 /* coscript */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = coscript; sourceTree = "<group>"; };
 		1AAB62461CB7B1910042E3B0 /* COScriptTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScriptTests.m; sourceTree = "<group>"; };
 		1AAB62481CB7E4390042E3B0 /* codeToRun.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = codeToRun.js; sourceTree = "<group>"; };
-		1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = snippets_default.plist; sourceTree = "<group>"; };
 		1AAB62511CB865010042E3B0 /* CMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD.h; sourceTree = "<group>"; };
 		1AAB62521CB865010042E3B0 /* CMD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD.m; sourceTree = "<group>"; };
 		1ACF94E61CB8EA4700CBADCD /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
@@ -171,6 +170,7 @@
 		1ACF95851CB910C900CBADCD /* SketchSnippetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchSnippetsViewController.h; sourceTree = "<group>"; };
 		1ACF95861CB910C900CBADCD /* SketchSnippetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchSnippetsViewController.m; sourceTree = "<group>"; };
 		1ACF95891CB91AF000CBADCD /* Untitled.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Untitled.js; sourceTree = "<group>"; };
+		1ACF958B1CB9202D00CBADCD /* snippets_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = snippets_default.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,7 +272,6 @@
 				1AAB61D41CB6D9A70042E3B0 /* main.m */,
 				1AAB62481CB7E4390042E3B0 /* codeToRun.js */,
 				1ACF95891CB91AF000CBADCD /* Untitled.js */,
-				1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,6 +319,7 @@
 		1ACF95561CB8F79F00CBADCD /* SketchSnippets */ = {
 			isa = PBXGroup;
 			children = (
+				1ACF958B1CB9202D00CBADCD /* snippets_default.plist */,
 				1ACF95851CB910C900CBADCD /* SketchSnippetsViewController.h */,
 				1ACF95861CB910C900CBADCD /* SketchSnippetsViewController.m */,
 				1ACF95571CB8F79F00CBADCD /* SketchSnippets.h */,
@@ -544,7 +544,6 @@
 			files = (
 				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
-				1AAB624D1CB85A3A0042E3B0 /* snippets_default.plist in Resources */,
 				1AAB62351CB705D10042E3B0 /* coscript in Resources */,
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
@@ -579,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACF958C1CB9202D00CBADCD /* snippets_default.plist in Resources */,
 				1ACF95841CB90D9E00CBADCD /* SketchSnippets.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

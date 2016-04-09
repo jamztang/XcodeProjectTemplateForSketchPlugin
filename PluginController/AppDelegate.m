@@ -35,7 +35,7 @@
     self.snippetCombobox.usesDataSource = YES;
     self.snippetCombobox.dataSource = self;
 
-    [_command exec:@"pwd"];
+    [_command exec:@"say 'something'"];
 
     NSDictionary *snippets = [NSPropertyListSerialization propertyListWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"snippets_default.plist" ofType:nil]] options:0 format:nil error:nil];
 
@@ -67,7 +67,7 @@
     [data writeToFile:output
            atomically:YES];
 
-    [_command exec:@"coscript Untitled.js"];
+    NSLog(@"%@", [_command exec:@"coscript Untitled.js"]);
     [self save];
 }
 

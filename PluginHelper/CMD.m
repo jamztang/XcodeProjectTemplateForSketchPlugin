@@ -30,14 +30,19 @@
     _cd = [cd copy];
 }
 
-- (void)exec:(NSString *)command {
+- (NSString *)exec:(NSString *)command {
     NSArray *tokens = [command componentsSeparatedByString:@" "];
     NSString *binary = [tokens firstObject];
+
+    NSPipe *pipe = [NSPipe pipe];
 
     NSArray *exports = [_exports componentsSeparatedByString:@":"];
     exports = [exports arrayByAddingObject:self.cd];
 
     NSTask *task = [[NSTask alloc] init];
+    [task setStandardOutput:pipe];
+    [task setStandardError:pipe];
+
     [exports enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSString *path = [obj stringByAppendingPathComponent:binary];
         if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
@@ -51,6 +56,10 @@
     }
     [task launch];
     [task waitUntilExit];
+
+    NSData *data = [[pipe fileHandleForReading] readDataToEndOfFile];
+    NSString *output = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return output;
 }
 
 @end

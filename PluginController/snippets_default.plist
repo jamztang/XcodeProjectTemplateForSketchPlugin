@@ -37,5 +37,23 @@ run(context)</string>
 	<key>log</key>
 	<string>log(&quot;logasldfjalskdf&quot;)
 </string>
+	<key>say</key>
+	<string>/* run loadFramework snippet first */
+
+var command = CMD.alloc().init();
+command.exec(&quot;say something&quot;)</string>
+	<key>plugin</key>
+	<string>@import &apos;helper.js&apos;;
+log(classExists(&quot;Manifest&quot;))</string>
+	<key>manifest</key>
+	<string>log(NSClassFromString(&quot;Manifest&quot;))</string>
+	<key>loadFramework</key>
+	<string>@import &apos;./helper.js&apos;
+
+if (loadFramework(&quot;PluginHelper&quot;, &quot;/Contents/Sketch&quot;)) {
+   log(&quot; ✅ Success&quot;)
+} else {
+   log(&quot; ❌ Failed to load framework&quot;)
+}</string>
 </dict>
 </plist>

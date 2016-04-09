@@ -28,7 +28,6 @@
 		1AAB62251CB6DAD10042E3B0 /* PluginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62221CB6DAD10042E3B0 /* PluginTests.m */; };
 		1AAB62281CB6DDAA0042E3B0 /* Plugin.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */; };
 		1AAB62301CB6F3690042E3B0 /* helper.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622E1CB6F3690042E3B0 /* helper.js */; };
-		1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */; };
 		1AAB62351CB705D10042E3B0 /* coscript in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62341CB705D10042E3B0 /* coscript */; };
 		1AAB62471CB7B1910042E3B0 /* COScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62461CB7B1910042E3B0 /* COScriptTests.m */; };
 		1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62481CB7E4390042E3B0 /* codeToRun.js */; };
@@ -393,7 +392,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
-				1AAB62311CB6F3690042E3B0 /* SketchLibrary.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
 				1AAB624D1CB85A3A0042E3B0 /* snippets_default.plist in Resources */,
 				1AAB62351CB705D10042E3B0 /* coscript in Resources */,

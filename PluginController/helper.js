@@ -1,17 +1,22 @@
-@import 'SketchLibrary.js'
+var scriptPath = coscript.env().scriptURL.path()+""
 
-var root = $.paths.pluginPath
+var root = 	(function(){
+             var NSScriptPath = NSString.stringWithString(scriptPath);
 
-// e.g. loadBundle("Plugin.bundle", "/Contents/Sketch/")
-var loadBundle = function(name, dir) {
-    return $.runtime.loadBundle(root + dir + "/" + name);
-}
+             while(NSScriptPath.lastPathComponent().pathExtension() != "sketchplugin"){
+             NSScriptPath = NSScriptPath.stringByDeletingLastPathComponent();
+             }
 
-// e.g. loadFramework("Plugin.framework", "/Contents/Sketch/")
+             return NSScriptPath+"";
+             })();
+
 var loadFramework = function(name, dir) {
-    return $.runtime.loadFramework(name, root + dir);
+    var mocha = Mocha.sharedRuntime();
+    var success = [mocha loadFrameworkWithName:name inDirectory:(root + dir)];
+
+    return success
 }
 
 var classExists = function(name) {
-    return $.runtime.classExists(name);
+    return NSClassFromString(name) != null;
 }

@@ -12,6 +12,6 @@
 
 @property (nonatomic, copy) NSString *cd;  // default to [[NSBundle mainBundle] resourcePath]
 
-- (void)exec:(NSString *)command;
+- (NSString *)exec:(NSString *)command;
 
 @end

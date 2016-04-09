@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char ArtboardPreviewVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ArtboardPreview/PublicHeader.h>
 
+#import <ArtboardPreview/ArtboardPreviewController.h>
+#import <ArtboardPreview/ArtboardPreviewViewController.h>
 

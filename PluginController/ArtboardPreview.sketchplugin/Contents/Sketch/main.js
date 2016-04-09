@@ -1,7 +1,9 @@
 @import 'helper.js'
 
 var openWindow = function(context) {
-  
+
+  context.shouldKeepAround(true);
+
   log("Open Window Started");
   context.document.showMessage("Open Window Started2");
   if ( ! classExists("ArtboardPreviewController")) {
@@ -15,8 +17,9 @@ var openWindow = function(context) {
     log("framework loaded " + loaded);
     context.document.showMessage("framework loaded ");
   }
-  var controller = ArtboardPreviewController.alloc().init()
+  var controller = ArtboardPreviewController.alloc().initWithContext(context)
   // log("controller.string ", controller.string());
+  controller.launch()
   context.document.showMessage("controller initalized");
 
 }

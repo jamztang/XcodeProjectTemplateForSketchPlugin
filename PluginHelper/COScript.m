@@ -32,7 +32,7 @@
     code = [code stringByReplacingOccurrencesOfString:@"\n" withString:@"\\\n"];
     code = [code stringByReplacingOccurrencesOfString:@"\"" withString:@"'"];
 
-    NSLog(@"File generated at `%@`", [[NSBundle mainBundle] pathForResource:@"Untitled.js" ofType:nil]);
+//    NSLog(@"File generated at `%@`", [[NSBundle mainBundle] pathForResource:@"Untitled.js" ofType:nil]);
     NSString *template = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"codeToRun.js" ofType:nil]
                                                usedEncoding:nil
                                                       error:nil];
@@ -42,7 +42,7 @@
     NSData *data = [merged dataUsingEncoding:NSUTF8StringEncoding];
     if ([data writeToFile:output
                atomically:YES]) {
-        NSLog(@"✅ wrote file to output %@", output);
+//        NSLog(@"✅ wrote file to output %@", output);
     } else {
         NSLog(@"❌ failed to write file to output %@", output);
     }

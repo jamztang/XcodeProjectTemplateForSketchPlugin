@@ -686,6 +686,16 @@
                             <action selector="snippetsButtonDidPress:" target="Voe-Tx-rLC" id="CTR-gz-aN5"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vn1-OY-x3w">
+                        <rect key="frame" x="294" y="277" width="143" height="32"/>
+                        <buttonCell key="cell" type="push" title="artboard preview" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AjO-md-kXS">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="artboardPreviewButtonDidPress:" target="Voe-Tx-rLC" id="Gtx-dy-Qeg"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="502" y="268.5"/>

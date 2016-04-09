@@ -10,6 +10,10 @@
 
 @interface ArtboardPreviewController : NSObject
 
+@property (nonatomic, strong) id context;
+
+- (instancetype)initWithContext:(id)context;
 - (NSString *)string;
+- (void)launch;
 
 @end

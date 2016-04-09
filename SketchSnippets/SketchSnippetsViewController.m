@@ -107,7 +107,7 @@
     if ( ! [data writeToFile:path atomically:YES]) {
         NSLog(@"failed to write to %@", path);
     } else {
-        NSLog(@"successfully saved to %@", path);
+//        NSLog(@"successfully saved to %@", path);
     }
 }
 

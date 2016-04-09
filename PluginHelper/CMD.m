@@ -51,11 +51,11 @@
             *stop = YES;
         }
     }];
-    NSLog(@"CMD: cd %@", self.cd);
+//    NSLog(@"CMD: cd %@", self.cd);
     [task setCurrentDirectoryPath:self.cd];
 
-    NSLog(@"CMD: launchPath %@", launchPath);
-    
+//    NSLog(@"CMD: launchPath %@", launchPath);
+
     [task setLaunchPath:launchPath];
 
 

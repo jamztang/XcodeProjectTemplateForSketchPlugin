@@ -7,8 +7,24 @@
 //
 
 #import "ArtboardPreviewController.h"
+#import <Cocoa/Cocoa.h>
 
 @implementation ArtboardPreviewController
+
+- (instancetype)initWithContext:(id)context
+{
+    self = [super init];
+    if (self) {
+        _context = context;
+    }
+    return self;
+}
+
+- (void)launch {
+    NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"ArtboardPreview" bundle:[NSBundle bundleForClass:[self class]]];
+    NSWindowController *controller = [storyboard instantiateInitialController];
+    [controller showWindow:self];
+}
 
 - (NSString *)string {
     return @"dfsafsd";

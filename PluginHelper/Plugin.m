@@ -108,23 +108,32 @@
 
 - (void)install {
 
-    [self writeToPath:[[self installPath] stringByAppendingPathComponent:self.name]];
+//
+//    NSString *artboardPreviewPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Frameworks/ArtboardPreview.framework"];
+//
+//    [[NSFileManager defaultManager] copyItemAtPath:artboardPreviewPath
+//                                            toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/ArtboardPreview.framework"]
+//                                             error:nil];;
+//
+//
+//    [self writeToPath:[[self installPath] stringByAppendingPathComponent:self.name]];
+//
+//    NSString *frameworkName = [self.name stringByReplacingOccurrencesOfString:@".sketchplugin" withString:@""];
+//    NSString *framework = [[[[self installPath] stringByAppendingPathComponent:self.name] stringByAppendingPathComponent:@"/Contents/Sketch"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.framework", frameworkName]];
+//
+//    NSString *frameworkPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"Contents/Frameworks/%@.framework", frameworkName]];
+//
+//    NSLog(@"frameworkPath %@", frameworkPath);
+//    BOOL success = [[NSFileManager defaultManager] copyItemAtPath:frameworkPath
+//                                            toPath:framework
+//                                             error:nil];
+//
+//    if (success) {
+//        NSLog(@"successfullly installe framework %@", frameworkPath);
+//    } else {
+//        NSLog(@"failed to installe framework %@", frameworkPath);
+//    }
 
-    NSString *frameworkName = [self.name stringByReplacingOccurrencesOfString:@".sketchplugin" withString:@""];
-    NSString *framework = [[[[self installPath] stringByAppendingPathComponent:self.name] stringByAppendingPathComponent:@"/Contents/Sketch"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.framework", frameworkName]];
-
-    NSString *frameworkPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"Contents/Frameworks/%@.framework", frameworkName]];
-
-    NSLog(@"frameworkPath %@", frameworkPath);
-    BOOL success = [[NSFileManager defaultManager] copyItemAtPath:frameworkPath
-                                            toPath:framework
-                                             error:nil];
-
-    if (success) {
-        NSLog(@"successfullly installe framework %@", frameworkPath);
-    } else {
-        NSLog(@"failed to installe framework %@", frameworkPath);
-    }
 }
 
 //

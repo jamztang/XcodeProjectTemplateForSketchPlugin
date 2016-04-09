@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A34137F1CB9500D0086D034 /* ArtboardPreview.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95AF1CB920CE00CBADCD /* ArtboardPreview.sketchplugin */; };
 		1AAB61D21CB6D9A70042E3B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB61D11CB6D9A70042E3B0 /* AppDelegate.m */; };
 		1AAB61D51CB6D9A70042E3B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB61D41CB6D9A70042E3B0 /* main.m */; };
 		1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61D61CB6D9A70042E3B0 /* Assets.xcassets */; };
@@ -51,10 +52,12 @@
 		1ACF95A31CB920AA00CBADCD /* ArtboardPreviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95A21CB920AA00CBADCD /* ArtboardPreviewTests.m */; };
 		1ACF95A71CB920AA00CBADCD /* ArtboardPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; };
 		1ACF95A81CB920AA00CBADCD /* ArtboardPreview.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1ACF95B01CB920CE00CBADCD /* ArtboardPreview.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95AF1CB920CE00CBADCD /* ArtboardPreview.sketchplugin */; };
 		1ACF95B31CB9326200CBADCD /* ArtboardPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95B11CB9326200CBADCD /* ArtboardPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACF95B41CB9326200CBADCD /* ArtboardPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95B21CB9326200CBADCD /* ArtboardPreviewController.m */; };
 		1ACF95B61CB938E800CBADCD /* ArtboardPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95B51CB938E800CBADCD /* ArtboardPreview.storyboard */; };
+		1ACF95B81CB9410500CBADCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95B71CB9410500CBADCD /* Images.xcassets */; };
+		1ACF95BB1CB9416900CBADCD /* ArtboardPreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95B91CB9416900CBADCD /* ArtboardPreviewViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1ACF95BC1CB9416900CBADCD /* ArtboardPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95BA1CB9416900CBADCD /* ArtboardPreviewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,15 +146,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1AAB62271CB6DC100042E3B0 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +206,9 @@
 		1ACF95B11CB9326200CBADCD /* ArtboardPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtboardPreviewController.h; sourceTree = "<group>"; };
 		1ACF95B21CB9326200CBADCD /* ArtboardPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtboardPreviewController.m; sourceTree = "<group>"; };
 		1ACF95B51CB938E800CBADCD /* ArtboardPreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArtboardPreview.storyboard; sourceTree = "<group>"; };
+		1ACF95B71CB9410500CBADCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1ACF95B91CB9416900CBADCD /* ArtboardPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtboardPreviewViewController.h; sourceTree = "<group>"; };
+		1ACF95BA1CB9416900CBADCD /* ArtboardPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtboardPreviewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,7 +405,10 @@
 				1ACF95941CB920A900CBADCD /* ArtboardPreview.h */,
 				1ACF95B11CB9326200CBADCD /* ArtboardPreviewController.h */,
 				1ACF95B21CB9326200CBADCD /* ArtboardPreviewController.m */,
+				1ACF95B91CB9416900CBADCD /* ArtboardPreviewViewController.h */,
+				1ACF95BA1CB9416900CBADCD /* ArtboardPreviewViewController.m */,
 				1ACF95B51CB938E800CBADCD /* ArtboardPreview.storyboard */,
+				1ACF95B71CB9410500CBADCD /* Images.xcassets */,
 				1ACF95961CB920A900CBADCD /* Info.plist */,
 			);
 			path = ArtboardPreview;
@@ -455,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACF95B31CB9326200CBADCD /* ArtboardPreviewController.h in Headers */,
+				1ACF95BB1CB9416900CBADCD /* ArtboardPreviewViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +470,6 @@
 				1AAB61CA1CB6D9A70042E3B0 /* Frameworks */,
 				1AAB61CB1CB6D9A70042E3B0 /* Resources */,
 				1AAB62101CB6DAB90042E3B0 /* Embed Frameworks */,
-				1AAB62271CB6DC100042E3B0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -684,8 +684,8 @@
 				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
 				1AAB62351CB705D10042E3B0 /* coscript in Resources */,
+				1A34137F1CB9500D0086D034 /* ArtboardPreview.sketchplugin in Resources */,
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
-				1ACF95B01CB920CE00CBADCD /* ArtboardPreview.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
 				1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */,
 				1ACF958A1CB91AF000CBADCD /* Untitled.js in Resources */,
@@ -735,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACF95B61CB938E800CBADCD /* ArtboardPreview.storyboard in Resources */,
+				1ACF95B81CB9410500CBADCD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACF95BC1CB9416900CBADCD /* ArtboardPreviewViewController.m in Sources */,
 				1ACF95B41CB9326200CBADCD /* ArtboardPreviewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1270,6 +1272,7 @@
 				1ACF956E1CB8F79F00CBADCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ACF956F1CB8F79F00CBADCD /* Build configuration list for PBXNativeTarget "SketchSnippetsTests" */ = {
 			isa = XCConfigurationList;
@@ -1278,6 +1281,7 @@
 				1ACF95711CB8F79F00CBADCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ACF95A91CB920AA00CBADCD /* Build configuration list for PBXNativeTarget "ArtboardPreview" */ = {
 			isa = XCConfigurationList;
@@ -1286,6 +1290,7 @@
 				1ACF95AB1CB920AA00CBADCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ACF95AC1CB920AA00CBADCD /* Build configuration list for PBXNativeTarget "ArtboardPreviewTests" */ = {
 			isa = XCConfigurationList;
@@ -1294,6 +1299,7 @@
 				1ACF95AE1CB920AA00CBADCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

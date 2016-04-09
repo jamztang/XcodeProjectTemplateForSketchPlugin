@@ -76,26 +76,27 @@
     NSString *path = [_output stringByExpandingTildeInPath];
     [_plugin writeToPath:path];
 
-    NSString *helperJS = [path stringByAppendingPathComponent:@"/Contents/Sketch/helper.js"];
-    BOOL helperISDirectory;
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:helperJS isDirectory:&helperISDirectory]);
-    XCTAssertFalse(helperISDirectory);
+    {
+        NSString *file = [path stringByAppendingPathComponent:@"/Contents/Sketch/helper.js"];
+        BOOL isDirectory;
+        XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isDirectory]);
+        XCTAssertFalse(isDirectory);
+    }
 
-    NSString *library = [path stringByAppendingPathComponent:@"/Contents/Sketch/SketchLibrary.js"];
-    BOOL libraryIsDirectory;
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:library isDirectory:&libraryIsDirectory]);
-    XCTAssertFalse(libraryIsDirectory);
+    {
+        NSString *file = [path stringByAppendingPathComponent:@"/Contents/Sketch/PluginHelper.framework"];
+        BOOL isDirectory;
+        XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isDirectory]);
+        XCTAssertTrue(isDirectory);
+    }
 
-    NSString *untitled = [path stringByAppendingPathComponent:@"/Contents/Sketch/Untitled.js"];
-    BOOL untitledIsDirectory;
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:untitled isDirectory:&untitledIsDirectory]);
-    XCTAssertFalse(untitledIsDirectory);
 
-    NSString *codeToRun = [path stringByAppendingPathComponent:@"/Contents/Sketch/runAsCommandTemplate.js"];
-    BOOL codeToRunIsDirectory;
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:codeToRun isDirectory:&codeToRunIsDirectory]);
-    XCTAssertFalse(codeToRunIsDirectory);
-
+    {
+        NSString *file = [path stringByAppendingPathComponent:@"/Contents/Sketch/codeToRun.js"];
+        BOOL isDirectory;
+        XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isDirectory]);
+        XCTAssertFalse(isDirectory);
+    }
 }
 
 //

@@ -35,7 +35,7 @@
     self.snippetCombobox.usesDataSource = YES;
     self.snippetCombobox.dataSource = self;
 
-    [_command exec:@"say 'something'"];
+//    [_command exec:@"say 'something'"];
 
     NSDictionary *snippets = [NSPropertyListSerialization propertyListWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"snippets_default.plist" ofType:nil]] options:0 format:nil error:nil];
 

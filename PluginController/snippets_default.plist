@@ -2,8 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>showMessage</key>
-	<string>context.document.showMessage(&quot;someMessage&quot;)</string>
+	<key>sketch showMessage</key>
+	<string>/* Show something with Sketch alert box */
+
+context.document.showMessage(&quot;someMessage&quot;)</string>
+	<key>sketch context</key>
+	<string>/* Print Context for Sketch */
+
+log(context)</string>
 	<key>_default</key>
 	<string>log(&apos;This is an example Sketch script.&apos;);
 
@@ -22,32 +28,38 @@ if (selectedCount == 0) {
     log((i+1) + &apos;. &apos; + layer.name());
   }
 };</string>
-	<key>for</key>
+	<key>snippet for loop</key>
 	<string>for (var i = 0; i &lt; 10; i++) {
    log(i)
 }</string>
-	<key>function</key>
+	<key>snippet function</key>
 	<string>function run(context) {
      log(context)
 }
 
 run(context)</string>
-	<key>import</key>
-	<string>@import &apos;./helper.js&apos;</string>
-	<key>log</key>
-	<string>log(&quot;logasldfjalskdf&quot;)
+	<key>snippet log</key>
+	<string>log(&quot;Hi there!, see this message in the Xcode console&quot;)
 </string>
-	<key>say</key>
-	<string>/* run loadFramework snippet first */
+	<key>command say</key>
+	<string>/* Say something nice */
+@import &apos;./helper.js&apos;
+
+if ( ! classExists(&quot;CMD&quot;)) {
+   log(&quot;⚠️ load framework first&quot;)
+} else {
+   var command = CMD.alloc().init();
+   command.exec(&quot;say Hey people, do you hear me?&quot;)
+}
+</string>
+	<key>command pwd</key>
+	<string>/* Print current working directory */
 
 var command = CMD.alloc().init();
-command.exec(&quot;say something&quot;)</string>
-	<key>plugin</key>
-	<string>@import &apos;helper.js&apos;;
-log(classExists(&quot;Manifest&quot;))</string>
-	<key>manifest</key>
+log(&quot;pwd: &quot; + command.exec(&quot;pwd&quot;))</string>
+	<key>snippet log manifest</key>
 	<string>log(NSClassFromString(&quot;Manifest&quot;))</string>
-	<key>loadFramework</key>
+	<key>snippet loadFramework</key>
 	<string>@import &apos;./helper.js&apos;
 
 if (loadFramework(&quot;PluginHelper&quot;, &quot;/Contents/Sketch&quot;)) {
@@ -55,5 +67,17 @@ if (loadFramework(&quot;PluginHelper&quot;, &quot;/Contents/Sketch&quot;)) {
 } else {
    log(&quot; ❌ Failed to load framework&quot;)
 }</string>
+	<key>snippet if-elseif-else</key>
+	<string>/* Generate a number from 1 - 10 */
+var num = Math.floor((Math.random() * 10) + 1);
+
+if (num == 1) {
+   log(&quot;you are the one&quot;);
+} else if (num % 2 == 0) {
+   log(num + &quot; is even&quot;);
+} else {
+   log(num + &quot; is odd&quot;);
+}
+</string>
 </dict>
 </plist>

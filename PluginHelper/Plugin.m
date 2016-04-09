@@ -88,10 +88,10 @@
 //                                            toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/SketchLibrary.js"];
 //
 
-//    NSString *codeToRun = [[NSBundle mainBundle] pathForResource:@"SketchLibrary.js" ofType:nil];
-//    [[NSFileManager defaultManager] copyItemAtPath:library
-//                                            toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/SketchLibrary.js"]
-//                                             error:nil];                                            error:nil];
+    NSString *codeToRun = [[NSBundle mainBundle] pathForResource:@"codeToRun.js" ofType:nil];
+    [[NSFileManager defaultManager] copyItemAtPath:codeToRun
+                                            toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/codeToRun.js"]
+                                             error:nil];
 }
 
 //

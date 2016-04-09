@@ -34,6 +34,8 @@
 		1AAB624D1CB85A3A0042E3B0 /* snippets_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */; };
 		1AAB62531CB865010042E3B0 /* CMD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62511CB865010042E3B0 /* CMD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB62541CB865010042E3B0 /* CMD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62521CB865010042E3B0 /* CMD.m */; };
+		1ACF94E81CB8EA4700CBADCD /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF94E61CB8EA4700CBADCD /* COScript.h */; };
+		1ACF94E91CB8EA4700CBADCD /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF94E71CB8EA4700CBADCD /* COScript.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = snippets_default.plist; sourceTree = "<group>"; };
 		1AAB62511CB865010042E3B0 /* CMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD.h; sourceTree = "<group>"; };
 		1AAB62521CB865010042E3B0 /* CMD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD.m; sourceTree = "<group>"; };
+		1ACF94E61CB8EA4700CBADCD /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
+		1ACF94E71CB8EA4700CBADCD /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +235,8 @@
 				1AAB62181CB6DAC80042E3B0 /* Plugin.h */,
 				1AAB62191CB6DAC80042E3B0 /* Plugin.m */,
 				1AAB61FA1CB6DAB90042E3B0 /* Info.plist */,
+				1ACF94E61CB8EA4700CBADCD /* COScript.h */,
+				1ACF94E71CB8EA4700CBADCD /* COScript.m */,
 			);
 			path = PluginHelper;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAB621A1CB6DAC80042E3B0 /* Command.h in Headers */,
+				1ACF94E81CB8EA4700CBADCD /* COScript.h in Headers */,
 				1AAB621E1CB6DAC80042E3B0 /* Plugin.h in Headers */,
 				1AAB621C1CB6DAC80042E3B0 /* Manifest.h in Headers */,
 				1AAB61F91CB6DAB90042E3B0 /* PluginHelper.h in Headers */,
@@ -450,6 +457,7 @@
 				1AAB62541CB865010042E3B0 /* CMD.m in Sources */,
 				1AAB621F1CB6DAC80042E3B0 /* Plugin.m in Sources */,
 				1AAB621D1CB6DAC80042E3B0 /* Manifest.m in Sources */,
+				1ACF94E91CB8EA4700CBADCD /* COScript.m in Sources */,
 				1AAB621B1CB6DAC80042E3B0 /* Command.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +724,7 @@
 				1AAB61EB1CB6D9A70042E3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AAB61EC1CB6D9A70042E3B0 /* Build configuration list for PBXNativeTarget "PluginControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +733,7 @@
 				1AAB61EE1CB6D9A70042E3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AAB620D1CB6DAB90042E3B0 /* Build configuration list for PBXNativeTarget "PluginHelper" */ = {
 			isa = XCConfigurationList;
@@ -732,6 +742,7 @@
 				1AAB620F1CB6DAB90042E3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AAB62111CB6DAB90042E3B0 /* Build configuration list for PBXNativeTarget "PluginHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -740,6 +751,7 @@
 				1AAB62131CB6DAB90042E3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

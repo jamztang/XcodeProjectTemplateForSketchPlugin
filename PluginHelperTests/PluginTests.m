@@ -24,6 +24,7 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
 
     _plugin = [Plugin pluginWithName:@"Plugin.sketchplugin"];
+
     _output = @"~/Desktop/Plugin";
 }
 
@@ -106,7 +107,9 @@
     }
 }
 
-//
+- (void)testInstallPath {
+    XCTAssertEqualObjects([_plugin installPath], [@"~/Library/Application Support/com.bohemiancoding.sketch3/Plugins" stringByExpandingTildeInPath]);
+}
 
 //
 //- (void)testUpdatingManifestJSON {

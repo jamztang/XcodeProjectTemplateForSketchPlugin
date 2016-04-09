@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSBundle *bundle;
 @property (nonatomic, strong) Manifest *manifest;
-//@property (nonatomic, copy) NSString *pluginPath;
+@property (nonatomic, copy) NSString *name;
 //@property (nonatomic, copy) NSString *manifestPath;
 //@property (nonatomic, copy) NSString *sketchPath;
 //@property (nonatomic, copy) NSString *contentsPath;
@@ -45,6 +45,7 @@
     Manifest *manifest = [Manifest manifestForJSON:json];
     if (self = [self initWithManifest:manifest]) {
         _bundle = bundle;
+        _name = [[_bundle bundlePath] lastPathComponent];
     }
     return self;
 }
@@ -78,6 +79,7 @@
                                             toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/PluginHelper.framework"]
                                              error:nil];
 
+
     NSString *helper = [[NSBundle mainBundle] pathForResource:@"helper.js" ofType:nil];
     [[NSFileManager defaultManager] copyItemAtPath:helper
                                             toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/helper.js"]
@@ -93,6 +95,36 @@
     [[NSFileManager defaultManager] copyItemAtPath:codeToRun
                                             toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/codeToRun.js"]
                                              error:nil];
+
+
+    NSLog(@"Plugin installed %@", path);
+}
+
+- (NSString *)installPath {
+    NSString *appSupportPath = [[[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] firstObject] path];
+    NSString *pluginFolderPath = [appSupportPath stringByAppendingPathComponent:@"com.bohemiancoding.sketch3/Plugins"];
+    return pluginFolderPath;
+}
+
+- (void)install {
+
+    [self writeToPath:[[self installPath] stringByAppendingPathComponent:self.name]];
+
+    NSString *frameworkName = [self.name stringByReplacingOccurrencesOfString:@".sketchplugin" withString:@""];
+    NSString *framework = [[[[self installPath] stringByAppendingPathComponent:self.name] stringByAppendingPathComponent:@"/Contents/Sketch"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.framework", frameworkName]];
+
+    NSString *frameworkPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"Contents/Frameworks/%@.framework", frameworkName]];
+
+    NSLog(@"frameworkPath %@", frameworkPath);
+    BOOL success = [[NSFileManager defaultManager] copyItemAtPath:frameworkPath
+                                            toPath:framework
+                                             error:nil];
+
+    if (success) {
+        NSLog(@"successfullly installe framework %@", frameworkPath);
+    } else {
+        NSLog(@"failed to installe framework %@", frameworkPath);
+    }
 }
 
 //

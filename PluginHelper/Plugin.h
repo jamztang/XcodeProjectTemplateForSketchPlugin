@@ -15,5 +15,7 @@
 
 + (instancetype)pluginWithName:(NSString *)name;
 - (void)writeToPath:(NSString *)path;
+- (NSString *)installPath;
+- (void)install;
 
 @end

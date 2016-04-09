@@ -1,0 +1,26 @@
+{
+  "build" : "1",
+  "author" : "James Tang",
+  "commands" : [
+    {
+      "script" : "main.js",
+      "handler" : "openWindow",
+      "shortcut" : "control shift w",
+      "name" : "Open Window",
+      "identifier" : "openWindow"
+    },
+  ],
+  "menu" : {
+    "title" : "Artboard Preview",
+    "isRoot" : true,
+    "items" : [
+      "openWindow"
+    ]
+  },
+  "identifier" : "design.magicmirror.artboardpreview",
+  "version" : "1.0",
+  "description" : "Artboard Preview",
+  "email" : "james@magicmirror.design",
+  "name" : "Plugin",
+  "homepage" : "http://magicmirror.design"
+}

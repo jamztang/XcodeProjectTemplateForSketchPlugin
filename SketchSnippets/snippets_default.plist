@@ -79,5 +79,25 @@ if (num == 1) {
    log(num + &quot; is odd&quot;);
 }
 </string>
+	<key>snippet flatten</key>
+	<string>/* Flatten selected layers */
+var selectedLayers = context.selection;
+var selectedCount = selectedLayers.count();
+
+if (selectedCount == 0) {
+  log(&apos;No layers are selected.&apos;);
+} else {
+  log(&apos;Selected layers:&apos;);
+  for (var i = 0; i &lt; selectedCount; i++) {
+    var layer = selectedLayers[i];
+    log((i+1) + &apos;. &apos; + layer.name());
+  }
+  
+   var flattener = MSLayerFlattener.alloc().init();
+   var array = MSLayerArray.arrayWithLayers(selectedLayers);
+   flattener.flattenLayers(array);
+
+    log(&quot;layers flattened&quot;);
+};</string>
 </dict>
 </plist>

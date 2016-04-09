@@ -15,8 +15,6 @@
 		1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */; };
 		1AAB61F91CB6DAB90042E3B0 /* PluginHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB61F81CB6DAB90042E3B0 /* PluginHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB62001CB6DAB90042E3B0 /* PluginHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; };
-		1AAB620B1CB6DAB90042E3B0 /* PluginHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; };
-		1AAB620C1CB6DAB90042E3B0 /* PluginHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AAB621A1CB6DAC80042E3B0 /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62141CB6DAC80042E3B0 /* Command.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB621B1CB6DAC80042E3B0 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62151CB6DAC80042E3B0 /* Command.m */; };
 		1AAB621C1CB6DAC80042E3B0 /* Manifest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62161CB6DAC80042E3B0 /* Manifest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,8 +32,20 @@
 		1AAB624D1CB85A3A0042E3B0 /* snippets_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */; };
 		1AAB62531CB865010042E3B0 /* CMD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62511CB865010042E3B0 /* CMD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB62541CB865010042E3B0 /* CMD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62521CB865010042E3B0 /* CMD.m */; };
-		1ACF94E81CB8EA4700CBADCD /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF94E61CB8EA4700CBADCD /* COScript.h */; };
+		1ACF94E81CB8EA4700CBADCD /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF94E61CB8EA4700CBADCD /* COScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACF94E91CB8EA4700CBADCD /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF94E71CB8EA4700CBADCD /* COScript.m */; };
+		1ACF955F1CB8F79F00CBADCD /* SketchSnippets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */; };
+		1ACF95661CB8F79F00CBADCD /* SketchSnippetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95651CB8F79F00CBADCD /* SketchSnippetsTests.m */; };
+		1ACF956A1CB8F79F00CBADCD /* SketchSnippets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */; };
+		1ACF956B1CB8F79F00CBADCD /* SketchSnippets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1ACF95761CB902A700CBADCD /* SketchSnippetsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95741CB902A700CBADCD /* SketchSnippetsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1ACF95771CB902A700CBADCD /* SketchSnippetsApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95751CB902A700CBADCD /* SketchSnippetsApp.m */; };
+		1ACF957D1CB9084900CBADCD /* PluginHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1ACF957E1CB909A400CBADCD /* SketchSnippets.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95571CB8F79F00CBADCD /* SketchSnippets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1ACF95841CB90D9E00CBADCD /* SketchSnippets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95831CB90D9E00CBADCD /* SketchSnippets.storyboard */; };
+		1ACF95871CB910C900CBADCD /* SketchSnippetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95851CB910C900CBADCD /* SketchSnippetsViewController.h */; };
+		1ACF95881CB910C900CBADCD /* SketchSnippetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95861CB910C900CBADCD /* SketchSnippetsViewController.m */; };
+		1ACF958A1CB91AF000CBADCD /* Untitled.js in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95891CB91AF000CBADCD /* Untitled.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +70,28 @@
 			remoteGlobalIDString = 1AAB61CC1CB6D9A70042E3B0;
 			remoteInfo = PluginController;
 		};
-		1AAB62091CB6DAB90042E3B0 /* PBXContainerItemProxy */ = {
+		1ACF95601CB8F79F00CBADCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAB61C51CB6D9A70042E3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ACF95541CB8F79E00CBADCD;
+			remoteInfo = SketchSnippets;
+		};
+		1ACF95621CB8F79F00CBADCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAB61C51CB6D9A70042E3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AAB61CC1CB6D9A70042E3B0;
+			remoteInfo = PluginController;
+		};
+		1ACF95681CB8F79F00CBADCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAB61C51CB6D9A70042E3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ACF95541CB8F79E00CBADCD;
+			remoteInfo = SketchSnippets;
+		};
+		1ACF957B1CB9084100CBADCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1AAB61C51CB6D9A70042E3B0 /* Project object */;
 			proxyType = 1;
@@ -76,7 +107,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1AAB620C1CB6DAB90042E3B0 /* PluginHelper.framework in Embed Frameworks */,
+				1ACF956B1CB8F79F00CBADCD /* SketchSnippets.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +159,18 @@
 		1AAB62521CB865010042E3B0 /* CMD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD.m; sourceTree = "<group>"; };
 		1ACF94E61CB8EA4700CBADCD /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
 		1ACF94E71CB8EA4700CBADCD /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
+		1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SketchSnippets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ACF95571CB8F79F00CBADCD /* SketchSnippets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SketchSnippets.h; sourceTree = "<group>"; };
+		1ACF95591CB8F79F00CBADCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ACF955E1CB8F79F00CBADCD /* SketchSnippetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SketchSnippetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ACF95651CB8F79F00CBADCD /* SketchSnippetsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SketchSnippetsTests.m; sourceTree = "<group>"; };
+		1ACF95671CB8F79F00CBADCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ACF95741CB902A700CBADCD /* SketchSnippetsApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchSnippetsApp.h; sourceTree = "<group>"; };
+		1ACF95751CB902A700CBADCD /* SketchSnippetsApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchSnippetsApp.m; sourceTree = "<group>"; };
+		1ACF95831CB90D9E00CBADCD /* SketchSnippets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SketchSnippets.storyboard; sourceTree = "<group>"; };
+		1ACF95851CB910C900CBADCD /* SketchSnippetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchSnippetsViewController.h; sourceTree = "<group>"; };
+		1ACF95861CB910C900CBADCD /* SketchSnippetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchSnippetsViewController.m; sourceTree = "<group>"; };
+		1ACF95891CB91AF000CBADCD /* Untitled.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Untitled.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AAB620B1CB6DAB90042E3B0 /* PluginHelper.framework in Frameworks */,
+				1ACF956A1CB8F79F00CBADCD /* SketchSnippets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +204,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ACF95511CB8F79E00CBADCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ACF957D1CB9084900CBADCD /* PluginHelper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ACF955B1CB8F79F00CBADCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ACF955F1CB8F79F00CBADCD /* SketchSnippets.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -171,6 +230,8 @@
 				1AAB61E31CB6D9A70042E3B0 /* PluginControllerTests */,
 				1AAB61F71CB6DAB90042E3B0 /* PluginHelper */,
 				1AAB62051CB6DAB90042E3B0 /* PluginHelperTests */,
+				1ACF95561CB8F79F00CBADCD /* SketchSnippets */,
+				1ACF95641CB8F79F00CBADCD /* SketchSnippetsTests */,
 				1AAB61CE1CB6D9A70042E3B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,6 +243,8 @@
 				1AAB61E01CB6D9A70042E3B0 /* PluginControllerTests.xctest */,
 				1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */,
 				1AAB61FF1CB6DAB90042E3B0 /* PluginHelperTests.xctest */,
+				1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */,
+				1ACF955E1CB8F79F00CBADCD /* SketchSnippetsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,8 +255,8 @@
 				1AAB61D01CB6D9A70042E3B0 /* AppDelegate.h */,
 				1AAB61D11CB6D9A70042E3B0 /* AppDelegate.m */,
 				1AAB61D61CB6D9A70042E3B0 /* Assets.xcassets */,
-				1AAB61D81CB6D9A70042E3B0 /* MainMenu.xib */,
 				1AAB61DB1CB6D9A70042E3B0 /* Info.plist */,
+				1AAB61D81CB6D9A70042E3B0 /* MainMenu.xib */,
 				1AAB61D31CB6D9A70042E3B0 /* Supporting Files */,
 			);
 			path = PluginController;
@@ -208,6 +271,7 @@
 				1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */,
 				1AAB61D41CB6D9A70042E3B0 /* main.m */,
 				1AAB62481CB7E4390042E3B0 /* codeToRun.js */,
+				1ACF95891CB91AF000CBADCD /* Untitled.js */,
 				1AAB624C1CB85A3A0042E3B0 /* snippets_default.plist */,
 			);
 			name = "Supporting Files";
@@ -228,6 +292,8 @@
 				1AAB61F81CB6DAB90042E3B0 /* PluginHelper.h */,
 				1AAB62511CB865010042E3B0 /* CMD.h */,
 				1AAB62521CB865010042E3B0 /* CMD.m */,
+				1ACF94E61CB8EA4700CBADCD /* COScript.h */,
+				1ACF94E71CB8EA4700CBADCD /* COScript.m */,
 				1AAB62141CB6DAC80042E3B0 /* Command.h */,
 				1AAB62151CB6DAC80042E3B0 /* Command.m */,
 				1AAB62161CB6DAC80042E3B0 /* Manifest.h */,
@@ -235,8 +301,6 @@
 				1AAB62181CB6DAC80042E3B0 /* Plugin.h */,
 				1AAB62191CB6DAC80042E3B0 /* Plugin.m */,
 				1AAB61FA1CB6DAB90042E3B0 /* Info.plist */,
-				1ACF94E61CB8EA4700CBADCD /* COScript.h */,
-				1ACF94E71CB8EA4700CBADCD /* COScript.m */,
 			);
 			path = PluginHelper;
 			sourceTree = "<group>";
@@ -253,6 +317,29 @@
 			path = PluginHelperTests;
 			sourceTree = "<group>";
 		};
+		1ACF95561CB8F79F00CBADCD /* SketchSnippets */ = {
+			isa = PBXGroup;
+			children = (
+				1ACF95851CB910C900CBADCD /* SketchSnippetsViewController.h */,
+				1ACF95861CB910C900CBADCD /* SketchSnippetsViewController.m */,
+				1ACF95571CB8F79F00CBADCD /* SketchSnippets.h */,
+				1ACF95831CB90D9E00CBADCD /* SketchSnippets.storyboard */,
+				1ACF95741CB902A700CBADCD /* SketchSnippetsApp.h */,
+				1ACF95751CB902A700CBADCD /* SketchSnippetsApp.m */,
+				1ACF95591CB8F79F00CBADCD /* Info.plist */,
+			);
+			path = SketchSnippets;
+			sourceTree = "<group>";
+		};
+		1ACF95641CB8F79F00CBADCD /* SketchSnippetsTests */ = {
+			isa = PBXGroup;
+			children = (
+				1ACF95651CB8F79F00CBADCD /* SketchSnippetsTests.m */,
+				1ACF95671CB8F79F00CBADCD /* Info.plist */,
+			);
+			path = SketchSnippetsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -266,6 +353,16 @@
 				1AAB621C1CB6DAC80042E3B0 /* Manifest.h in Headers */,
 				1AAB61F91CB6DAB90042E3B0 /* PluginHelper.h in Headers */,
 				1AAB62531CB865010042E3B0 /* CMD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ACF95521CB8F79E00CBADCD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ACF957E1CB909A400CBADCD /* SketchSnippets.h in Headers */,
+				1ACF95761CB902A700CBADCD /* SketchSnippetsApp.h in Headers */,
+				1ACF95871CB910C900CBADCD /* SketchSnippetsViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +382,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1AAB620A1CB6DAB90042E3B0 /* PBXTargetDependency */,
+				1ACF95691CB8F79F00CBADCD /* PBXTargetDependency */,
 			);
 			name = PluginController;
 			productName = PluginController;
@@ -347,6 +444,44 @@
 			productReference = 1AAB61FF1CB6DAB90042E3B0 /* PluginHelperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1ACF95541CB8F79E00CBADCD /* SketchSnippets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ACF956C1CB8F79F00CBADCD /* Build configuration list for PBXNativeTarget "SketchSnippets" */;
+			buildPhases = (
+				1ACF95501CB8F79E00CBADCD /* Sources */,
+				1ACF95511CB8F79E00CBADCD /* Frameworks */,
+				1ACF95521CB8F79E00CBADCD /* Headers */,
+				1ACF95531CB8F79E00CBADCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ACF957C1CB9084100CBADCD /* PBXTargetDependency */,
+			);
+			name = SketchSnippets;
+			productName = SketchSnippets;
+			productReference = 1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1ACF955D1CB8F79F00CBADCD /* SketchSnippetsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ACF956F1CB8F79F00CBADCD /* Build configuration list for PBXNativeTarget "SketchSnippetsTests" */;
+			buildPhases = (
+				1ACF955A1CB8F79F00CBADCD /* Sources */,
+				1ACF955B1CB8F79F00CBADCD /* Frameworks */,
+				1ACF955C1CB8F79F00CBADCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ACF95611CB8F79F00CBADCD /* PBXTargetDependency */,
+				1ACF95631CB8F79F00CBADCD /* PBXTargetDependency */,
+			);
+			name = SketchSnippetsTests;
+			productName = SketchSnippetsTests;
+			productReference = 1ACF955E1CB8F79F00CBADCD /* SketchSnippetsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -370,6 +505,13 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 1AAB61CC1CB6D9A70042E3B0;
 					};
+					1ACF95541CB8F79E00CBADCD = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					1ACF955D1CB8F79F00CBADCD = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 1AAB61CC1CB6D9A70042E3B0;
+					};
 				};
 			};
 			buildConfigurationList = 1AAB61C81CB6D9A70042E3B0 /* Build configuration list for PBXProject "PluginController" */;
@@ -389,6 +531,8 @@
 				1AAB61DF1CB6D9A70042E3B0 /* PluginControllerTests */,
 				1AAB61F51CB6DAB90042E3B0 /* PluginHelper */,
 				1AAB61FE1CB6DAB90042E3B0 /* PluginHelperTests */,
+				1ACF95541CB8F79E00CBADCD /* SketchSnippets */,
+				1ACF955D1CB8F79F00CBADCD /* SketchSnippetsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,6 +549,7 @@
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
 				1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */,
+				1ACF958A1CB91AF000CBADCD /* Untitled.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +572,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAB62281CB6DDAA0042E3B0 /* Plugin.sketchplugin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ACF95531CB8F79E00CBADCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ACF95841CB90D9E00CBADCD /* SketchSnippets.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ACF955C1CB8F79F00CBADCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +633,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ACF95501CB8F79E00CBADCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ACF95881CB910C900CBADCD /* SketchSnippetsViewController.m in Sources */,
+				1ACF95771CB902A700CBADCD /* SketchSnippetsApp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ACF955A1CB8F79F00CBADCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ACF95661CB8F79F00CBADCD /* SketchSnippetsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -491,10 +668,25 @@
 			target = 1AAB61CC1CB6D9A70042E3B0 /* PluginController */;
 			targetProxy = 1AAB62031CB6DAB90042E3B0 /* PBXContainerItemProxy */;
 		};
-		1AAB620A1CB6DAB90042E3B0 /* PBXTargetDependency */ = {
+		1ACF95611CB8F79F00CBADCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ACF95541CB8F79E00CBADCD /* SketchSnippets */;
+			targetProxy = 1ACF95601CB8F79F00CBADCD /* PBXContainerItemProxy */;
+		};
+		1ACF95631CB8F79F00CBADCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AAB61CC1CB6D9A70042E3B0 /* PluginController */;
+			targetProxy = 1ACF95621CB8F79F00CBADCD /* PBXContainerItemProxy */;
+		};
+		1ACF95691CB8F79F00CBADCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ACF95541CB8F79E00CBADCD /* SketchSnippets */;
+			targetProxy = 1ACF95681CB8F79F00CBADCD /* PBXContainerItemProxy */;
+		};
+		1ACF957C1CB9084100CBADCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1AAB61F51CB6DAB90042E3B0 /* PluginHelper */;
-			targetProxy = 1AAB62091CB6DAB90042E3B0 /* PBXContainerItemProxy */;
+			targetProxy = 1ACF957B1CB9084100CBADCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -705,6 +897,72 @@
 			};
 			name = Release;
 		};
+		1ACF956D1CB8F79F00CBADCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SketchSnippets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.SketchSnippets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1ACF956E1CB8F79F00CBADCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SketchSnippets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.SketchSnippets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1ACF95701CB8F79F00CBADCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SketchSnippetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.SketchSnippetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PluginController.app/Contents/MacOS/PluginController";
+			};
+			name = Debug;
+		};
+		1ACF95711CB8F79F00CBADCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SketchSnippetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = design.magicmirror.SketchSnippetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PluginController.app/Contents/MacOS/PluginController";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -752,6 +1010,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1ACF956C1CB8F79F00CBADCD /* Build configuration list for PBXNativeTarget "SketchSnippets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ACF956D1CB8F79F00CBADCD /* Debug */,
+				1ACF956E1CB8F79F00CBADCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1ACF956F1CB8F79F00CBADCD /* Build configuration list for PBXNativeTarget "SketchSnippetsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ACF95701CB8F79F00CBADCD /* Debug */,
+				1ACF95711CB8F79F00CBADCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -43,14 +43,22 @@
     [task setStandardOutput:pipe];
     [task setStandardError:pipe];
 
+    __block NSString *launchPath;
     [exports enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSString *path = [obj stringByAppendingPathComponent:binary];
         if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-            [task setLaunchPath:path];
+            launchPath = path;
             *stop = YES;
         }
     }];
+    NSLog(@"CMD: cd %@", self.cd);
     [task setCurrentDirectoryPath:self.cd];
+
+    NSLog(@"CMD: launchPath %@", launchPath);
+    
+    [task setLaunchPath:launchPath];
+
+
     if ([tokens count] >= 2) {
         [task setArguments:[tokens subarrayWithRange:NSMakeRange(1, [tokens count] - 1)]];
     }

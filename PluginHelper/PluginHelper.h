@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char PluginHelperVersionString[];
 #import <PluginHelper/Plugin.h>
 #import <PluginHelper/Command.h>
 #import <PluginHelper/CMD.h>
+#import <PluginHelper/COScript.h>

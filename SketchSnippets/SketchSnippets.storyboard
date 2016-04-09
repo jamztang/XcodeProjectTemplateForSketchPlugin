@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Lja-BZ-AJu">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="QiY-1j-H5n">
+            <objects>
+                <windowController id="Lja-BZ-AJu" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="RZ1-X4-vwE">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="546" height="385"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="Hoo-O6-6vD" kind="relationship" relationship="window.shadowedContentViewController" id="uwZ-CB-L2y"/>
+                    </connections>
+                </windowController>
+                <customObject id="ZdV-gV-GOa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="223"/>
+        </scene>
+        <!--Sketch Snippets View Controller-->
+        <scene sceneID="alT-U1-Ops">
+            <objects>
+                <viewController id="Hoo-O6-6vD" customClass="SketchSnippetsViewController" sceneMemberID="viewController">
+                    <view key="view" id="odh-35-ZK3">
+                        <rect key="frame" x="0.0" y="0.0" width="546" height="385"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eec-3e-pc2">
+                                <rect key="frame" x="20" y="263" width="512" height="102"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="hE2-uE-idp">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">The following files are installed. Please do not manually edit it.
+
+PluginHelper.framework is installed.
+helper.js is installed.
+SketchLibrary.js is installed.
+
+
+You can now add new Classes to the PluginHelper target, then load that from your main.js
+
+@import 'helper.js'
+
+var run = function(context) {
+    loadFramework("PluginHelper");
+    var plugin = Plugin.alloc().init();
+    log(plugin.manifest());
+}</string>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1M-qO-7ga">
+                                <rect key="frame" x="20" y="50" width="512" height="198"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bMG-WE-zOD">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">log("message");
+context.document.showMessage("something");
+log(context);
+
+/*@import './helper.js'
+
+var run = function(context) {
+    loadFramework("PluginHelper");
+    var plugin = Plugin.alloc().init();
+    log(plugin.manifest());
+}*/</string>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-pt-ssv">
+                                <rect key="frame" x="449" y="9" width="89" height="32"/>
+                                <buttonCell key="cell" type="push" title="Execute" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MUM-UI-cUs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="executeButtonDidPress:" target="Hoo-O6-6vD" id="9VS-jZ-hDU"/>
+                                </connections>
+                            </button>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4KI-Vn-i3O">
+                                <rect key="frame" x="329" y="12" width="121" height="26"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Sketch" drawsBackground="YES" numberOfVisibleItems="5" id="OCE-VO-q4c">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Sketch</string>
+                                        <string>Sketch Beta</string>
+                                        <string>Sketch Hamburg</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2b-SQ-22y">
+                                <rect key="frame" x="20" y="13" width="153" height="26"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="F0e-xX-tnl">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Item 1</string>
+                                        <string>Item 2</string>
+                                        <string>Item 3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ls4-Mp-HIH">
+                                <rect key="frame" x="238" y="9" width="80" height="32"/>
+                                <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fxp-Ow-97u">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="deleteButtonDidPress:" target="Hoo-O6-6vD" id="llA-A2-CMw"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zno-gz-y8g">
+                                <rect key="frame" x="172" y="9" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ogs-rd-1zN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveButtonDidPress:" target="Hoo-O6-6vD" id="jPv-Ff-aso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="T1M-qO-7ga" id="Nun-GD-We6"/>
+                        <outlet property="snippetCombobox" destination="N2b-SQ-22y" id="9jc-Sw-UNJ"/>
+                        <outlet property="targetComboBox" destination="4KI-Vn-i3O" id="tNt-Uu-8tS"/>
+                    </connections>
+                </viewController>
+                <customObject id="bZI-3Z-wRb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="215.5"/>
+        </scene>
+    </scenes>
+</document>

@@ -84,6 +84,13 @@
     }
 
     {
+        NSString *file = [path stringByAppendingPathComponent:@"/Contents/Sketch/Untitled.js"];
+        BOOL isDirectory;
+        XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isDirectory]);
+        XCTAssertFalse(isDirectory);
+    }
+
+    {
         NSString *file = [path stringByAppendingPathComponent:@"/Contents/Sketch/PluginHelper.framework"];
         BOOL isDirectory;
         XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isDirectory]);

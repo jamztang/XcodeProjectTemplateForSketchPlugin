@@ -28,7 +28,7 @@
 }
 
 - (void)exec:(NSString *)code forTarget:(NSString *)target output:(NSString *)output {
-    code = [code stringByReplacingOccurrencesOfString:@"./" withString:[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/"]];
+    code = [code stringByReplacingOccurrencesOfString:@"./" withString:[[output stringByDeletingLastPathComponent] stringByAppendingString:@"/"]];
     code = [code stringByReplacingOccurrencesOfString:@"\n" withString:@"\\\n"];
     code = [code stringByReplacingOccurrencesOfString:@"\"" withString:@"'"];
 
@@ -42,12 +42,14 @@
     NSData *data = [merged dataUsingEncoding:NSUTF8StringEncoding];
     if ([data writeToFile:output
                atomically:YES]) {
-
+        NSLog(@"✅ wrote file to output %@", output);
+    } else {
+        NSLog(@"❌ failed to write file to output %@", output);
     }
 
-    NSLog(@"%@", [_command exec:@"coscript Untitled.js"]);
-    [_command exec:code];
-    
+    NSString *response = [_command exec:[NSString stringWithFormat:@"coscript %@", output]];
+    NSLog(@"%@", response);
+
 }
 
 @end

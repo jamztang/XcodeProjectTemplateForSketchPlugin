@@ -83,10 +83,11 @@
                                             toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/helper.js"]
                                              error:nil];
 
-//    NSString *library = [[NSBundle mainBundle] pathForResource:@"SketchLibrary.js" ofType:nil];
-//    [[NSFileManager defaultManager] copyItemAtPath:library
-//                                            toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/SketchLibrary.js"];
-//
+    NSString *library = [[NSBundle mainBundle] pathForResource:@"Untitled.js" ofType:nil];
+    [[NSFileManager defaultManager] copyItemAtPath:library
+                                            toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/Untitled.js"]
+                                             error:nil];
+
 
     NSString *codeToRun = [[NSBundle mainBundle] pathForResource:@"codeToRun.js" ofType:nil];
     [[NSFileManager defaultManager] copyItemAtPath:codeToRun

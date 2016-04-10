@@ -9,6 +9,13 @@
 #import "ArtboardPreviewController.h"
 #import <Cocoa/Cocoa.h>
 
+@interface ArtboardPreviewController ()
+
+@property (nonatomic, strong) NSWindowController *controller;
+@property (nonatomic, strong) id context;
+
+@end
+
 @implementation ArtboardPreviewController
 
 - (instancetype)initWithContext:(id)context
@@ -24,6 +31,7 @@
     NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"ArtboardPreview" bundle:[NSBundle bundleForClass:[self class]]];
     NSWindowController *controller = [storyboard instantiateInitialController];
     [controller showWindow:self];
+    _controller = controller;
 }
 
 - (NSString *)string {

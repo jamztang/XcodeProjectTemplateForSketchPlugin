@@ -9,13 +9,13 @@
 #import "AppDelegate.h"
 @import PluginHelper;
 @import SketchSnippets;
-//@import ArtboardPreview;
+@import ArtboardPreview;
 
 @interface AppDelegate () <NSComboBoxDelegate, NSComboBoxDataSource>
 
 @property (weak) IBOutlet NSWindow *window;
 @property (nonatomic, strong) SketchSnippetsApp *sketchSnippetsApp;
-//@property (nonatomic, strong) ArtboardPreview *artboardPreview;
+@property (nonatomic, strong) ArtboardPreviewController *artboardPreview;
 
 @end
 
@@ -33,8 +33,8 @@
 }
 
 - (IBAction)artboardPreviewButtonDidPress:(id)sender {
-//    _artboardPreview = [[ArtboardPreviewController alloc] init];
-//    [_artboardPreview launch];
+    _artboardPreview = [[ArtboardPreviewController alloc] init];
+    [_artboardPreview launch];
 }
 
 @end

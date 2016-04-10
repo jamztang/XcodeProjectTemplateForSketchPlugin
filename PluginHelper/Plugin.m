@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSBundle *bundle;
 @property (nonatomic, strong) Manifest *manifest;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *pluginName;
+@property (nonatomic, copy) NSString *frameworkName;
 //@property (nonatomic, copy) NSString *manifestPath;
 //@property (nonatomic, copy) NSString *sketchPath;
 //@property (nonatomic, copy) NSString *contentsPath;
@@ -45,7 +47,9 @@
     Manifest *manifest = [Manifest manifestForJSON:json];
     if (self = [self initWithManifest:manifest]) {
         _bundle = bundle;
-        _name = [[_bundle bundlePath] lastPathComponent];
+        _name = [[[_bundle bundlePath] lastPathComponent] stringByReplacingOccurrencesOfString:@".sketchplugin" withString:@""];
+        _frameworkName = [_name stringByAppendingString:@".framework"];
+        _pluginName = [_name stringByAppendingString:@".sketchplugin"];
     }
     return self;
 }
@@ -107,33 +111,29 @@
 }
 
 - (void)install {
+    [[NSFileManager defaultManager] removeItemAtPath: [[self installPath] stringByAppendingPathComponent:self.pluginName]
+                                               error:nil];
+    [self writeToPath:[[self installPath] stringByAppendingPathComponent:self.pluginName]];
 
-//
-//    NSString *artboardPreviewPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Frameworks/ArtboardPreview.framework"];
-//
-//    [[NSFileManager defaultManager] copyItemAtPath:artboardPreviewPath
-//                                            toPath:[path stringByAppendingPathComponent:@"Contents/Sketch/ArtboardPreview.framework"]
-//                                             error:nil];;
-//
-//
-//    [self writeToPath:[[self installPath] stringByAppendingPathComponent:self.name]];
-//
-//    NSString *frameworkName = [self.name stringByReplacingOccurrencesOfString:@".sketchplugin" withString:@""];
-//    NSString *framework = [[[[self installPath] stringByAppendingPathComponent:self.name] stringByAppendingPathComponent:@"/Contents/Sketch"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.framework", frameworkName]];
-//
-//    NSString *frameworkPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"Contents/Frameworks/%@.framework", frameworkName]];
-//
-//    NSLog(@"frameworkPath %@", frameworkPath);
-//    BOOL success = [[NSFileManager defaultManager] copyItemAtPath:frameworkPath
-//                                            toPath:framework
-//                                             error:nil];
-//
-//    if (success) {
-//        NSLog(@"successfullly installe framework %@", frameworkPath);
-//    } else {
-//        NSLog(@"failed to installe framework %@", frameworkPath);
-//    }
+    NSString *fromPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"Contents/Frameworks/%@", _frameworkName]];
+    NSString *toPath = [[self installPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/Contents/Sketch/%@", _pluginName, _frameworkName]];
 
+    NSError *error;
+    BOOL success = [[NSFileManager defaultManager] copyItemAtPath:fromPath
+                                                           toPath:toPath
+                                                            error:&error];
+
+    if (success) {
+        NSLog(@"✅ successfullly installe framework %@", @{ @"from": fromPath, @"to": toPath});
+    } else {
+        BOOL fromExists = [[NSFileManager defaultManager] fileExistsAtPath:fromPath] ;
+        BOOL toExists = [[NSFileManager defaultManager] fileExistsAtPath:toPath] ;
+        NSLog(@"❌ failed to installe framework %@", @{ @"from" : fromPath , @"to" : toPath});
+        NSLog(@"from: %@",  fromExists ? @"✅":@"❌");
+        NSLog(@"to: %@",  toExists ? @"✅":@"❌");
+        NSLog(@"error: %@", error);
+
+    }
 }
 
 //

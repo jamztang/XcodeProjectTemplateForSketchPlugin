@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A34137F1CB9500D0086D034 /* ArtboardPreview.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95AF1CB920CE00CBADCD /* ArtboardPreview.sketchplugin */; };
+		1A6F432D1CBA22AC000C0594 /* ArtboardPreview.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95AF1CB920CE00CBADCD /* ArtboardPreview.sketchplugin */; };
+		1A6F432E1CBA22F3000C0594 /* ArtboardPreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95941CB920A900CBADCD /* ArtboardPreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB61D21CB6D9A70042E3B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB61D11CB6D9A70042E3B0 /* AppDelegate.m */; };
 		1AAB61D51CB6D9A70042E3B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB61D41CB6D9A70042E3B0 /* main.m */; };
 		1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB61D61CB6D9A70042E3B0 /* Assets.xcassets */; };
@@ -47,7 +48,6 @@
 		1ACF95881CB910C900CBADCD /* SketchSnippetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95861CB910C900CBADCD /* SketchSnippetsViewController.m */; };
 		1ACF958A1CB91AF000CBADCD /* Untitled.js in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95891CB91AF000CBADCD /* Untitled.js */; };
 		1ACF958C1CB9202D00CBADCD /* snippets_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF958B1CB9202D00CBADCD /* snippets_default.plist */; };
-		1ACF95951CB920A900CBADCD /* ArtboardPreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95941CB920A900CBADCD /* ArtboardPreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACF959C1CB920AA00CBADCD /* ArtboardPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; };
 		1ACF95A31CB920AA00CBADCD /* ArtboardPreviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95A21CB920AA00CBADCD /* ArtboardPreviewTests.m */; };
 		1ACF95A71CB920AA00CBADCD /* ArtboardPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; };
@@ -443,7 +443,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ACF95951CB920A900CBADCD /* ArtboardPreview.h in Headers */,
 				1ACF957E1CB909A400CBADCD /* SketchSnippets.h in Headers */,
 				1ACF95761CB902A700CBADCD /* SketchSnippetsApp.h in Headers */,
 				1ACF95871CB910C900CBADCD /* SketchSnippetsViewController.h in Headers */,
@@ -456,6 +455,7 @@
 			files = (
 				1ACF95B31CB9326200CBADCD /* ArtboardPreviewController.h in Headers */,
 				1ACF95BB1CB9416900CBADCD /* ArtboardPreviewViewController.h in Headers */,
+				1A6F432E1CBA22F3000C0594 /* ArtboardPreview.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,10 +681,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6F432D1CBA22AC000C0594 /* ArtboardPreview.sketchplugin in Resources */,
 				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
 				1AAB62351CB705D10042E3B0 /* coscript in Resources */,
-				1A34137F1CB9500D0086D034 /* ArtboardPreview.sketchplugin in Resources */,
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
 				1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */,

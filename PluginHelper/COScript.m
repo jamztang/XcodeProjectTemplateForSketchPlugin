@@ -27,7 +27,16 @@
     return self;
 }
 
-- (void)exec:(NSString *)code forTarget:(NSString *)target output:(NSString *)output {
+- (NSString *)execJS:(NSString *)jsFile forTarget:(NSString *)target output:(NSString *)output {
+
+    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:jsFile ofType:nil]
+                                          options:0 error:nil];
+    NSString *code = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+    return [self exec:code forTarget:target output:output];
+}
+
+- (NSString *)exec:(NSString *)code forTarget:(NSString *)target output:(NSString *)output {
     code = [code stringByReplacingOccurrencesOfString:@"./" withString:[[output stringByDeletingLastPathComponent] stringByAppendingString:@"/"]];
     code = [code stringByReplacingOccurrencesOfString:@"\n" withString:@"\\\n"];
     code = [code stringByReplacingOccurrencesOfString:@"\"" withString:@"'"];
@@ -48,7 +57,8 @@
     }
 
     NSString *response = [_command exec:[NSString stringWithFormat:@"coscript %@", output]];
-    NSLog(@"%@", response);
+
+    return [response substringToIndex:[response length] - 2];
 
 }
 

@@ -25,3 +25,4 @@ var loadFramework = function(name, dir) {
 var classExists = function(name) {
     return NSClassFromString(name) != null;
 }
+

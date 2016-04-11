@@ -10,6 +10,8 @@
 
 @interface COScript : NSObject
 
-- (void)exec:(NSString *)code forTarget:(NSString *)target output:(NSString *)output;
+- (NSString *)execJS:(NSString *)jsFile forTarget:(NSString *)target output:(NSString *)output;
+
+- (NSString *)exec:(NSString *)code forTarget:(NSString *)target output:(NSString *)output;
 
 @end

@@ -12,6 +12,6 @@
 
 - (instancetype)initWithContext:(id)context;
 - (NSString *)string;
-- (void)launch;
+- (void)launchWithImage:(NSImage *)image;
 
 @end

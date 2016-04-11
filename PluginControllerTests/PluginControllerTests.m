@@ -7,9 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
-//@import PluginHelper;
+@import PluginHelper;
 
 @interface PluginControllerTests : XCTestCase
+
+@property (nonatomic, strong) COScript *command;
+@property (nonatomic, strong) id context;
+@property (nonatomic, copy) NSString *identifier;
 
 @end
 
@@ -17,15 +21,20 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-
-
+    _command = [[COScript alloc] init];
+    _identifier = [_command execJS:@"putContext.js" forTarget:@"Sketch" output:[@"~/Desktop/Untitled.js" stringByExpandingTildeInPath]];
+    _context = [[[NSThread currentThread] threadDictionary] objectForKey:_identifier];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+
+    [[[NSThread currentThread] threadDictionary] removeObjectForKey:_identifier];
 }
 
+- (void)testContextNotNil {
+    XCTAssertNotNil(_identifier);
+}
 
 @end

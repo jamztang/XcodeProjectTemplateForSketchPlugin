@@ -26,21 +26,30 @@
         <!--Artboard Preview View Controller-->
         <scene sceneID="bww-jo-O23">
             <objects>
-                <viewController id="ShV-oC-g5x" customClass="ArtboardPreviewViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="previewView" id="ShV-oC-g5x" customClass="ArtboardPreviewViewController" sceneMemberID="viewController">
                     <view key="view" id="fK1-Sy-xNQ">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1776" height="1184"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tyV-Z8-En9">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tyV-Z8-En9" customClass="ArtboardPreviewImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="1776" height="1184"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="photo" id="Of4-4K-PFc"/>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="tyV-Z8-En9" firstAttribute="leading" secondItem="fK1-Sy-xNQ" secondAttribute="leading" id="2nu-cp-1Kb"/>
+                            <constraint firstAttribute="trailing" secondItem="tyV-Z8-En9" secondAttribute="trailing" id="Dok-5Y-aXP"/>
+                            <constraint firstAttribute="bottom" secondItem="tyV-Z8-En9" secondAttribute="bottom" id="X6J-3p-n1N"/>
+                            <constraint firstItem="tyV-Z8-En9" firstAttribute="top" secondItem="fK1-Sy-xNQ" secondAttribute="top" id="lQk-Fr-3Rg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="tyV-Z8-En9" id="vgk-5r-UV7"/>
+                    </connections>
                 </viewController>
                 <customObject id="AxB-dw-pTg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="219"/>
+            <point key="canvasLocation" x="982" y="1603"/>
         </scene>
     </scenes>
     <resources>

@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="artboardImageView" destination="W48-64-S2f" id="ddL-s5-wOp"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -687,7 +688,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vn1-OY-x3w">
-                        <rect key="frame" x="294" y="277" width="143" height="32"/>
+                        <rect key="frame" x="294" y="155" width="143" height="32"/>
                         <buttonCell key="cell" type="push" title="artboard preview" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AjO-md-kXS">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -696,8 +697,15 @@
                             <action selector="artboardPreviewButtonDidPress:" target="Voe-Tx-rLC" id="Gtx-dy-Qeg"/>
                         </connections>
                     </button>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W48-64-S2f">
+                        <rect key="frame" x="297" y="192" width="137" height="126"/>
+                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="aws-IZ-GWq"/>
+                    </imageView>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="artboardPreviewImageView" destination="W48-64-S2f" id="zXk-qS-RzM"/>
+            </connections>
             <point key="canvasLocation" x="502" y="268.5"/>
         </window>
     </objects>

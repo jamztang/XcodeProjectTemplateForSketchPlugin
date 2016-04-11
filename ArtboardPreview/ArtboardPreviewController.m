@@ -8,6 +8,7 @@
 
 #import "ArtboardPreviewController.h"
 #import <Cocoa/Cocoa.h>
+#import "ArtboardPreviewViewController.h"
 
 @interface ArtboardPreviewController ()
 
@@ -27,9 +28,11 @@
     return self;
 }
 
-- (void)launch {
+- (void)launchWithImage:(NSImage *)image {
     NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"ArtboardPreview" bundle:[NSBundle bundleForClass:[self class]]];
     NSWindowController *controller = [storyboard instantiateInitialController];
+    ArtboardPreviewViewController *preview = (ArtboardPreviewViewController *)[controller contentViewController];
+    preview.image = image;
     [controller showWindow:self];
     _controller = controller;
 }
@@ -37,5 +40,6 @@
 - (NSString *)string {
     return @"dfsafsd";
 }
+
 
 @end

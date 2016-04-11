@@ -10,4 +10,8 @@
 
 @interface ArtboardPreviewViewController : NSViewController
 
+@property (weak) IBOutlet NSImageView *imageView;
+
+@property (nonatomic, strong) NSImage *image;
+
 @end

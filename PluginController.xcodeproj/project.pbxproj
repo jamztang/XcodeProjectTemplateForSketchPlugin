@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A6F432D1CBA22AC000C0594 /* ArtboardPreview.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95AF1CB920CE00CBADCD /* ArtboardPreview.sketchplugin */; };
 		1A6F432E1CBA22F3000C0594 /* ArtboardPreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95941CB920A900CBADCD /* ArtboardPreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB61D21CB6D9A70042E3B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB61D11CB6D9A70042E3B0 /* AppDelegate.m */; };
 		1AAB61D51CB6D9A70042E3B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB61D41CB6D9A70042E3B0 /* main.m */; };
@@ -33,6 +32,12 @@
 		1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB62481CB7E4390042E3B0 /* codeToRun.js */; };
 		1AAB62531CB865010042E3B0 /* CMD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAB62511CB865010042E3B0 /* CMD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AAB62541CB865010042E3B0 /* CMD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB62521CB865010042E3B0 /* CMD.m */; };
+		1ACC47AC1CBB02B000148A99 /* PluginHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB61F61CB6DAB90042E3B0 /* PluginHelper.framework */; };
+		1ACC47AE1CBB04FB00148A99 /* putContext.js in Resources */ = {isa = PBXBuildFile; fileRef = 1ACC47AD1CBB04FB00148A99 /* putContext.js */; };
+		1ACC47AF1CBB2A5B00148A99 /* ArtboardPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; };
+		1ACC47B01CBB2A5E00148A99 /* ArtboardPreview.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1ACC47B91CBBFD2800148A99 /* ArtboardPreviewImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC47B71CBBFD2800148A99 /* ArtboardPreviewImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1ACC47BA1CBBFD2800148A99 /* ArtboardPreviewImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC47B81CBBFD2800148A99 /* ArtboardPreviewImageView.m */; };
 		1ACF94E81CB8EA4700CBADCD /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF94E61CB8EA4700CBADCD /* COScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACF94E91CB8EA4700CBADCD /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF94E71CB8EA4700CBADCD /* COScript.m */; };
 		1ACF955F1CB8F79F00CBADCD /* SketchSnippets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */; };
@@ -50,14 +55,13 @@
 		1ACF958C1CB9202D00CBADCD /* snippets_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF958B1CB9202D00CBADCD /* snippets_default.plist */; };
 		1ACF959C1CB920AA00CBADCD /* ArtboardPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; };
 		1ACF95A31CB920AA00CBADCD /* ArtboardPreviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95A21CB920AA00CBADCD /* ArtboardPreviewTests.m */; };
-		1ACF95A71CB920AA00CBADCD /* ArtboardPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; };
-		1ACF95A81CB920AA00CBADCD /* ArtboardPreview.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ACF95B31CB9326200CBADCD /* ArtboardPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95B11CB9326200CBADCD /* ArtboardPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACF95B41CB9326200CBADCD /* ArtboardPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95B21CB9326200CBADCD /* ArtboardPreviewController.m */; };
 		1ACF95B61CB938E800CBADCD /* ArtboardPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95B51CB938E800CBADCD /* ArtboardPreview.storyboard */; };
 		1ACF95B81CB9410500CBADCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACF95B71CB9410500CBADCD /* Images.xcassets */; };
 		1ACF95BB1CB9416900CBADCD /* ArtboardPreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF95B91CB9416900CBADCD /* ArtboardPreviewViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACF95BC1CB9416900CBADCD /* ArtboardPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF95BA1CB9416900CBADCD /* ArtboardPreviewViewController.m */; };
+		1AEFE7901CBA2A1B002D9B50 /* ArtboardPreview in Resources */ = {isa = PBXBuildFile; fileRef = 1AEFE78F1CBA2A1B002D9B50 /* ArtboardPreview */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,8 +144,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1ACF95A81CB920AA00CBADCD /* ArtboardPreview.framework in Embed Frameworks */,
 				1ACF956B1CB8F79F00CBADCD /* SketchSnippets.framework in Embed Frameworks */,
+				1ACC47B01CBB2A5E00148A99 /* ArtboardPreview.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +185,9 @@
 		1AAB62481CB7E4390042E3B0 /* codeToRun.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = codeToRun.js; sourceTree = "<group>"; };
 		1AAB62511CB865010042E3B0 /* CMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMD.h; sourceTree = "<group>"; };
 		1AAB62521CB865010042E3B0 /* CMD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMD.m; sourceTree = "<group>"; };
+		1ACC47AD1CBB04FB00148A99 /* putContext.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = putContext.js; sourceTree = "<group>"; };
+		1ACC47B71CBBFD2800148A99 /* ArtboardPreviewImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtboardPreviewImageView.h; sourceTree = "<group>"; };
+		1ACC47B81CBBFD2800148A99 /* ArtboardPreviewImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtboardPreviewImageView.m; sourceTree = "<group>"; };
 		1ACF94E61CB8EA4700CBADCD /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
 		1ACF94E71CB8EA4700CBADCD /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
 		1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SketchSnippets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,13 +209,13 @@
 		1ACF959B1CB920AA00CBADCD /* ArtboardPreviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtboardPreviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACF95A21CB920AA00CBADCD /* ArtboardPreviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtboardPreviewTests.m; sourceTree = "<group>"; };
 		1ACF95A41CB920AA00CBADCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1ACF95AF1CB920CE00CBADCD /* ArtboardPreview.sketchplugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ArtboardPreview.sketchplugin; sourceTree = "<group>"; };
 		1ACF95B11CB9326200CBADCD /* ArtboardPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtboardPreviewController.h; sourceTree = "<group>"; };
 		1ACF95B21CB9326200CBADCD /* ArtboardPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtboardPreviewController.m; sourceTree = "<group>"; };
 		1ACF95B51CB938E800CBADCD /* ArtboardPreview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArtboardPreview.storyboard; sourceTree = "<group>"; };
 		1ACF95B71CB9410500CBADCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1ACF95B91CB9416900CBADCD /* ArtboardPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtboardPreviewViewController.h; sourceTree = "<group>"; };
 		1ACF95BA1CB9416900CBADCD /* ArtboardPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtboardPreviewViewController.m; sourceTree = "<group>"; };
+		1AEFE78F1CBA2A1B002D9B50 /* ArtboardPreview */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ArtboardPreview; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,8 +223,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ACF95A71CB920AA00CBADCD /* ArtboardPreview.framework in Frameworks */,
 				1ACF956A1CB8F79F00CBADCD /* SketchSnippets.framework in Frameworks */,
+				1ACC47AF1CBB2A5B00148A99 /* ArtboardPreview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACC47AC1CBB02B000148A99 /* PluginHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,11 +334,12 @@
 				1AAB62341CB705D10042E3B0 /* coscript */,
 				1AAB622E1CB6F3690042E3B0 /* helper.js */,
 				1AAB622F1CB6F3690042E3B0 /* SketchLibrary.js */,
-				1ACF95AF1CB920CE00CBADCD /* ArtboardPreview.sketchplugin */,
+				1AEFE78F1CBA2A1B002D9B50 /* ArtboardPreview */,
 				1AAB61EF1CB6DA120042E3B0 /* Plugin.sketchplugin */,
 				1AAB61D41CB6D9A70042E3B0 /* main.m */,
 				1AAB62481CB7E4390042E3B0 /* codeToRun.js */,
 				1ACF95891CB91AF000CBADCD /* Untitled.js */,
+				1ACC47AD1CBB04FB00148A99 /* putContext.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -407,6 +416,8 @@
 				1ACF95B21CB9326200CBADCD /* ArtboardPreviewController.m */,
 				1ACF95B91CB9416900CBADCD /* ArtboardPreviewViewController.h */,
 				1ACF95BA1CB9416900CBADCD /* ArtboardPreviewViewController.m */,
+				1ACC47B71CBBFD2800148A99 /* ArtboardPreviewImageView.h */,
+				1ACC47B81CBBFD2800148A99 /* ArtboardPreviewImageView.m */,
 				1ACF95B51CB938E800CBADCD /* ArtboardPreview.storyboard */,
 				1ACF95B71CB9410500CBADCD /* Images.xcassets */,
 				1ACF95961CB920A900CBADCD /* Info.plist */,
@@ -456,6 +467,7 @@
 				1ACF95B31CB9326200CBADCD /* ArtboardPreviewController.h in Headers */,
 				1ACF95BB1CB9416900CBADCD /* ArtboardPreviewViewController.h in Headers */,
 				1A6F432E1CBA22F3000C0594 /* ArtboardPreview.h in Headers */,
+				1ACC47B91CBBFD2800148A99 /* ArtboardPreviewImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,10 +693,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A6F432D1CBA22AC000C0594 /* ArtboardPreview.sketchplugin in Resources */,
+				1AEFE7901CBA2A1B002D9B50 /* ArtboardPreview in Resources */,
 				1AAB62301CB6F3690042E3B0 /* helper.js in Resources */,
 				1AAB61D71CB6D9A70042E3B0 /* Assets.xcassets in Resources */,
 				1AAB62351CB705D10042E3B0 /* coscript in Resources */,
+				1ACC47AE1CBB04FB00148A99 /* putContext.js in Resources */,
 				1AAB61F01CB6DA120042E3B0 /* Plugin.sketchplugin in Resources */,
 				1AAB61DA1CB6D9A70042E3B0 /* MainMenu.xib in Resources */,
 				1AAB62491CB7E4390042E3B0 /* codeToRun.js in Resources */,
@@ -811,6 +824,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACF95BC1CB9416900CBADCD /* ArtboardPreviewViewController.m in Sources */,
+				1ACC47BA1CBBFD2800148A99 /* ArtboardPreviewImageView.m in Sources */,
 				1ACF95B41CB9326200CBADCD /* ArtboardPreviewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

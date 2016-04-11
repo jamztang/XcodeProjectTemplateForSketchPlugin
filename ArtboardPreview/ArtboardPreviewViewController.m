@@ -10,4 +10,19 @@
 
 @implementation ArtboardPreviewViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+}
+
+- (void)setImage:(NSImage *)image {
+    _image = image;
+    [self reloadData];
+}
+
+- (void)reloadData {
+    self.imageView.image = _image;
+
+}
+
 @end

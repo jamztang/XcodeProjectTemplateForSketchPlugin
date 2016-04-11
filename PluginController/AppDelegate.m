@@ -16,6 +16,7 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (nonatomic, strong) SketchSnippetsApp *sketchSnippetsApp;
 @property (nonatomic, strong) ArtboardPreviewController *artboardPreview;
+@property (weak) IBOutlet NSImageView *artboardImageView;
 
 @end
 
@@ -23,7 +24,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    Plugin *artboardPreview = [Plugin pluginWithName:@"ArtboardPreview.sketchplugin"];
+    Plugin *artboardPreview = [Plugin pluginWithName:@"ArtboardPreview"];
     [artboardPreview install];
 }
 
@@ -34,7 +35,7 @@
 
 - (IBAction)artboardPreviewButtonDidPress:(id)sender {
     _artboardPreview = [[ArtboardPreviewController alloc] init];
-    [_artboardPreview launch];
+    [_artboardPreview launchWithImage:self.artboardImageView.image];
 }
 
 @end

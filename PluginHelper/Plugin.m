@@ -15,9 +15,6 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *pluginName;
 @property (nonatomic, copy) NSString *frameworkName;
-//@property (nonatomic, copy) NSString *manifestPath;
-//@property (nonatomic, copy) NSString *sketchPath;
-//@property (nonatomic, copy) NSString *contentsPath;
 
 @end
 
@@ -136,47 +133,4 @@
     }
 }
 
-//
-//- (NSString *)description {
-//    NSBundle *bundle = _bundle;
-//    NSDictionary *info = @{
-//                           @"exec": [bundle executablePath],
-//                           @"resource": [bundle resourcePath],
-//                           @"private": [bundle privateFrameworksURL],
-//                           @"current": _pluginPath,
-//                           @"sketch": _sketchPath,
-//                           @"contents": _contentsPath,
-//                           @"manifest": _manifestPath,
-//                           };
-//    return [info description];
-//}
-//
-//- (void)removeManifestJSON {
-//    [[NSFileManager defaultManager] removeItemAtPath:_manifestPath error:nil];
-//}
-//
-//- (void)installManifestJSON {
-//    NSData *data = [NSJSONSerialization dataWithJSONObject:self.manifest.json
-//                                                   options:NSJSONWritingPrettyPrinted
-//                                                     error:nil];
-//    BOOL createdDirectory = [[NSFileManager defaultManager] createDirectoryAtPath:_sketchPath withIntermediateDirectories:NO attributes:nil error:nil];
-//
-//    NSLog(@"createdDirectory %d", createdDirectory);
-//    BOOL success = [[NSFileManager defaultManager] createFileAtPath:_manifestPath contents:data attributes:nil];
-//    if (success) {
-//        NSLog(@"generated manifest.json at %@", _manifestPath);
-//    } else {
-//        NSLog(@"failed to generated manifest.json at %@", self.manifestPath );
-//        NSLog(@"shoud be %@", [_pluginPath stringByAppendingString:@"Contents"]);
-//    }
-//}
-//
-//- (void)updateManifest:(PluginUpdateManifestHandler)handler {
-//    Manifest *manifest = self.manifest;
-//    if (handler) {
-//        handler(&manifest);
-//    }
-//    [self installManifestJSON];
-//}
-//
 @end

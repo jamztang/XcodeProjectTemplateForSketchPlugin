@@ -24,12 +24,20 @@ var openWindow = function(context) {
     context.shouldKeepAround = true;
 
     var layers = context.selection
+
+    var message = "";
     for (var i = 0; i < layers.count(); i++) {
         var layer = layers[i];
-        var image = _bridge.imageFromLayer(layer);
+        var image = _bridge.imageFromLayer(context, layer);
         var controller = ArtboardPreviewController.alloc().init();
         [controller launchWithImage:image name:layer.name()];
         NSThread.mainThread().threadDictionary().setObject_forKey_(controller, "artboardpreview" + i + NSDate.date());
+    }
+
+    if (layers.count() == 0) {
+        context.document.showMessage("No selection");
+    } else {
+        context.document.showMessage("Showing preview for " + layers.count() + " layers");
     }
 
 }

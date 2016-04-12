@@ -35,6 +35,8 @@
     preview.image = image;
     [controller showWindow:self];
     _controller = controller;
+    controller.window.level = NSMainMenuWindowLevel;
+    controller.window.hidesOnDeactivate = YES;
 }
 
 - (NSString *)string {

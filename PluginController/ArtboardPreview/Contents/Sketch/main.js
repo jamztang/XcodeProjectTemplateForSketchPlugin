@@ -3,8 +3,6 @@
 
 var openWindow = function(context) {
 
-//    _bridge.init(context);
-
     log("Open Window Started");
     context.document.showMessage("Open Window Started2");
     if ( ! classExists("ArtboardPreviewController")) {
@@ -24,12 +22,21 @@ var openWindow = function(context) {
     }
 
     context.shouldKeepAround = true;
-    var controller = ArtboardPreviewController.alloc().init();
-     log("controller.string " + controller);
 
-    var image = _bridge.imageFromSelection(context);
-    controller.launchWithImage(image);
+    var layers = context.selection
+    for (var i = 0; i < layers.count(); i++) {
+        var layer = layers[i];
+        var image = _bridge.imageFromLayer(layer);
+        var controller = ArtboardPreviewController.alloc().init();
+        [controller launchWithImage:image name:layer.name()];
+        NSThread.mainThread().threadDictionary().setObject_forKey_(controller, "artboardpreview" + i + NSDate.date());
+    }
 
-    log("3");
-    NSThread.mainThread().threadDictionary().setObject_forKey_(controller, "artboardpreview" + NSDate.date());
+}
+
+var printFrame = function(context) {
+    var selection = context.selection;
+    log(selection);
+    log(selection[0]);
+    log(selection[0].frame());
 }

@@ -29,6 +29,10 @@
 }
 
 - (void)launchWithImage:(NSImage *)image {
+    [self launchWithImage:image name:nil];
+}
+
+- (void)launchWithImage:(NSImage *)image name:(NSString *)name {
     NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"ArtboardPreview" bundle:[NSBundle bundleForClass:[self class]]];
     NSWindowController *controller = [storyboard instantiateInitialController];
     ArtboardPreviewViewController *preview = (ArtboardPreviewViewController *)[controller contentViewController];
@@ -37,11 +41,9 @@
     _controller = controller;
     controller.window.level = NSMainMenuWindowLevel;
     controller.window.hidesOnDeactivate = YES;
+    controller.window.title = name ?: @"Window";
 }
 
-- (NSString *)string {
-    return @"dfsafsd";
-}
 
 
 @end

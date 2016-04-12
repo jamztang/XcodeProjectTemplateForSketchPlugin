@@ -9,12 +9,19 @@
       "name" : "Open Window",
       "identifier" : "openWindow"
     },
+    {
+      "script" : "main.js",
+      "handler" : "printFrame",
+      "shortcut" : "control shift e",
+      "name" : "Print Frame",
+      "identifier" : "printFrame"
+    },
   ],
   "menu" : {
     "title" : "Artboard Preview",
-    "isRoot" : true,
+    "isRoot" : false,
     "items" : [
-      "openWindow"
+               "openWindow",
     ]
   },
   "identifier" : "design.magicmirror.artboardpreview",

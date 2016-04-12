@@ -26,3 +26,13 @@ _bridge.imageFromSelection = function(context) {
         return image;
     }
 };
+
+_bridge.imageFromLayer = function(layer) {
+    var flattener = MSLayerFlattener.alloc().init();
+
+    var array = MSLayerArray.arrayWithLayer(layer);
+    var page = layer.parentPage().cachedImmutableModelObject();
+    var image = flattener.imageFromLayers_immutablePage_(array, page);
+    log("image: " + image);
+    return image;
+}

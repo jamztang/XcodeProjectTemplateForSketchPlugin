@@ -13,5 +13,6 @@
 - (instancetype)initWithContext:(id)context;
 - (NSString *)string;
 - (void)launchWithImage:(NSImage *)image;
+- (void)launchWithImage:(NSImage *)image name:(NSString *)name;
 
 @end

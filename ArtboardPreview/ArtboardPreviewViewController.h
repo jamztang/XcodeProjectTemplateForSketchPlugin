@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ArtboardImageView.h"
 
 @interface ArtboardPreviewViewController : NSViewController
 
-@property (weak) IBOutlet NSImageView *imageView;
+@property (weak) IBOutlet NSView <ArtboardImageView> *imageView;
 
 @property (nonatomic, strong) NSImage *image;
 

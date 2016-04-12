@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ArtboardPreviewImageView : NSImageView
+#import "ArtboardImageView.h"
+
+@interface ArtboardPreviewImageView : NSView <ArtboardImageView>
+
+@property (nonatomic,strong) NSImage *image;
 
 @end

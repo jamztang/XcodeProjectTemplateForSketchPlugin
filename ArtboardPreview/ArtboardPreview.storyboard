@@ -10,10 +10,11 @@
             <objects>
                 <windowController id="gLj-ZL-gWf" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="5TT-lz-f0B">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES" unifiedTitleAndToolbar="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="245" y="301" width="480" height="480"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minFullScreenContentSize" type="size" width="200" height="200"/>
                     </window>
                     <connections>
                         <segue destination="ShV-oC-g5x" kind="relationship" relationship="window.shadowedContentViewController" id="hPU-8z-zQj"/>
@@ -28,23 +29,26 @@
             <objects>
                 <viewController storyboardIdentifier="previewView" id="ShV-oC-g5x" customClass="ArtboardPreviewViewController" sceneMemberID="viewController">
                     <view key="view" id="fK1-Sy-xNQ">
-                        <rect key="frame" x="0.0" y="0.0" width="1776" height="1184"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tyV-Z8-En9" customClass="ArtboardPreviewImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="1776" height="1184"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="photo" id="Of4-4K-PFc"/>
-                            </imageView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="8q7-dB-gQg" customClass="ArtboardPreviewImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="tyV-Z8-En9" firstAttribute="leading" secondItem="fK1-Sy-xNQ" secondAttribute="leading" id="2nu-cp-1Kb"/>
-                            <constraint firstAttribute="trailing" secondItem="tyV-Z8-En9" secondAttribute="trailing" id="Dok-5Y-aXP"/>
-                            <constraint firstAttribute="bottom" secondItem="tyV-Z8-En9" secondAttribute="bottom" id="X6J-3p-n1N"/>
-                            <constraint firstItem="tyV-Z8-En9" firstAttribute="top" secondItem="fK1-Sy-xNQ" secondAttribute="top" id="lQk-Fr-3Rg"/>
+                            <constraint firstAttribute="trailing" secondItem="8q7-dB-gQg" secondAttribute="trailing" id="0kM-ZJ-Vej"/>
+                            <constraint firstAttribute="bottom" secondItem="8q7-dB-gQg" secondAttribute="bottom" id="D20-zC-wd3"/>
+                            <constraint firstItem="8q7-dB-gQg" firstAttribute="leading" secondItem="fK1-Sy-xNQ" secondAttribute="leading" id="U1w-U0-ZKn"/>
+                            <constraint firstItem="8q7-dB-gQg" firstAttribute="top" secondItem="fK1-Sy-xNQ" secondAttribute="top" id="cA1-dd-rAd"/>
+                            <constraint firstAttribute="trailing" secondItem="8q7-dB-gQg" secondAttribute="trailing" id="gEy-5g-nAX"/>
+                            <constraint firstItem="8q7-dB-gQg" firstAttribute="top" secondItem="fK1-Sy-xNQ" secondAttribute="top" id="hp3-dq-xh5"/>
+                            <constraint firstItem="8q7-dB-gQg" firstAttribute="leading" secondItem="fK1-Sy-xNQ" secondAttribute="leading" id="uZK-Xa-ihH"/>
+                            <constraint firstAttribute="bottom" secondItem="8q7-dB-gQg" secondAttribute="bottom" id="vwL-TU-LW5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="tyV-Z8-En9" id="vgk-5r-UV7"/>
+                        <outlet property="imageView" destination="8q7-dB-gQg" id="eP2-NU-xGp"/>
                     </connections>
                 </viewController>
                 <customObject id="AxB-dw-pTg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -52,7 +56,4 @@
             <point key="canvasLocation" x="982" y="1603"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="photo" width="1776" height="1184"/>
-    </resources>
 </document>

@@ -19,5 +19,6 @@ FOUNDATION_EXPORT const unsigned char ArtboardPreviewVersionString[];
 #import <ArtboardPreview/ArtboardPreviewController.h>
 #import <ArtboardPreview/ArtboardPreviewViewController.h>
 #import <ArtboardPreview/ArtboardPreviewImageView.h>
+#import <ArtboardPreview/ArtboardImageView.h>
 
 

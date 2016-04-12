@@ -7,12 +7,14 @@
 //
 
 #import "ArtboardPreviewViewController.h"
+#import "ArtboardImageView.h"
 
 @implementation ArtboardPreviewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+//    [self.view mouseDownCanMoveWindow]
+//    [self.view.window setMovableByWindowBackground:YES];
 }
 
 - (void)setImage:(NSImage *)image {
@@ -21,7 +23,16 @@
 }
 
 - (void)reloadData {
-    self.imageView.image = _image;
+    NSImage *image = _image;
+    _imageView.image = image;
+
+    CGRect mainScreen = [[NSScreen mainScreen] frame];
+    CGFloat maxWidth = mainScreen.size.width / 4;
+    CGFloat ratio = _image.size.height / _image.size.width;
+    CGSize maxSize = CGSizeMake(maxWidth, maxWidth * ratio);
+
+    CGRect frame = self.view.window.frame;
+    [self.view.window setFrame:NSMakeRect(frame.origin.x, frame.origin.y, maxSize.width, maxSize.height) display:YES animate:YES];
 
 }
 

@@ -38,6 +38,9 @@
 		1ACC47B01CBB2A5E00148A99 /* ArtboardPreview.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95921CB920A900CBADCD /* ArtboardPreview.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ACC47B91CBBFD2800148A99 /* ArtboardPreviewImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC47B71CBBFD2800148A99 /* ArtboardPreviewImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACC47BA1CBBFD2800148A99 /* ArtboardPreviewImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC47B81CBBFD2800148A99 /* ArtboardPreviewImageView.m */; };
+		1ACC47BF1CBC45DA00148A99 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACC47BE1CBC45DA00148A99 /* Quartz.framework */; };
+		1ACC47C21CBC476B00148A99 /* ArtboardImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC47C01CBC476B00148A99 /* ArtboardImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1ACC47C31CBC476B00148A99 /* ArtboardImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC47C11CBC476B00148A99 /* ArtboardImageView.m */; };
 		1ACF94E81CB8EA4700CBADCD /* COScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF94E61CB8EA4700CBADCD /* COScript.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACF94E91CB8EA4700CBADCD /* COScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF94E71CB8EA4700CBADCD /* COScript.m */; };
 		1ACF955F1CB8F79F00CBADCD /* SketchSnippets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */; };
@@ -188,6 +191,9 @@
 		1ACC47AD1CBB04FB00148A99 /* putContext.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = putContext.js; sourceTree = "<group>"; };
 		1ACC47B71CBBFD2800148A99 /* ArtboardPreviewImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtboardPreviewImageView.h; sourceTree = "<group>"; };
 		1ACC47B81CBBFD2800148A99 /* ArtboardPreviewImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtboardPreviewImageView.m; sourceTree = "<group>"; };
+		1ACC47BE1CBC45DA00148A99 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		1ACC47C01CBC476B00148A99 /* ArtboardImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtboardImageView.h; sourceTree = "<group>"; };
+		1ACC47C11CBC476B00148A99 /* ArtboardImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtboardImageView.m; sourceTree = "<group>"; };
 		1ACF94E61CB8EA4700CBADCD /* COScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COScript.h; sourceTree = "<group>"; };
 		1ACF94E71CB8EA4700CBADCD /* COScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COScript.m; sourceTree = "<group>"; };
 		1ACF95551CB8F79E00CBADCD /* SketchSnippets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SketchSnippets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +277,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACC47BF1CBC45DA00148A99 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +295,7 @@
 		1AAB61C41CB6D9A70042E3B0 = {
 			isa = PBXGroup;
 			children = (
+				1ACC47BE1CBC45DA00148A99 /* Quartz.framework */,
 				1AAB61CF1CB6D9A70042E3B0 /* PluginController */,
 				1AAB61E31CB6D9A70042E3B0 /* PluginControllerTests */,
 				1AAB61F71CB6DAB90042E3B0 /* PluginHelper */,
@@ -418,6 +426,8 @@
 				1ACF95BA1CB9416900CBADCD /* ArtboardPreviewViewController.m */,
 				1ACC47B71CBBFD2800148A99 /* ArtboardPreviewImageView.h */,
 				1ACC47B81CBBFD2800148A99 /* ArtboardPreviewImageView.m */,
+				1ACC47C01CBC476B00148A99 /* ArtboardImageView.h */,
+				1ACC47C11CBC476B00148A99 /* ArtboardImageView.m */,
 				1ACF95B51CB938E800CBADCD /* ArtboardPreview.storyboard */,
 				1ACF95B71CB9410500CBADCD /* Images.xcassets */,
 				1ACF95961CB920A900CBADCD /* Info.plist */,
@@ -464,6 +474,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACC47C21CBC476B00148A99 /* ArtboardImageView.h in Headers */,
 				1ACF95B31CB9326200CBADCD /* ArtboardPreviewController.h in Headers */,
 				1ACF95BB1CB9416900CBADCD /* ArtboardPreviewViewController.h in Headers */,
 				1A6F432E1CBA22F3000C0594 /* ArtboardPreview.h in Headers */,
@@ -826,6 +837,7 @@
 				1ACF95BC1CB9416900CBADCD /* ArtboardPreviewViewController.m in Sources */,
 				1ACC47BA1CBBFD2800148A99 /* ArtboardPreviewImageView.m in Sources */,
 				1ACF95B41CB9326200CBADCD /* ArtboardPreviewController.m in Sources */,
+				1ACC47C31CBC476B00148A99 /* ArtboardImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

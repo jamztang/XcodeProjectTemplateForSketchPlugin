@@ -699,7 +699,7 @@
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W48-64-S2f">
                         <rect key="frame" x="297" y="192" width="137" height="126"/>
-                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="aws-IZ-GWq"/>
+                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="photo" id="aws-IZ-GWq"/>
                     </imageView>
                 </subviews>
             </view>
@@ -709,4 +709,7 @@
             <point key="canvasLocation" x="502" y="268.5"/>
         </window>
     </objects>
+    <resources>
+        <image name="photo" width="1776" height="1184"/>
+    </resources>
 </document>

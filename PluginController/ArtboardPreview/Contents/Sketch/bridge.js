@@ -22,6 +22,7 @@ _bridge.imageFromSelection = function(context) {
         var array = MSLayerArray.arrayWithLayers(selectedLayers);
         var page = context.document.currentPage().cachedImmutableModelObject();
         var image = flattener.imageFromLayers_immutablePage_(array, page);
-        log("image");
+        log("image: " + image);
+        return image;
     }
 };

@@ -8,7 +8,6 @@ var openWindow = function(context) {
     log("Open Window Started");
     context.document.showMessage("Open Window Started2");
     if ( ! classExists("ArtboardPreviewController")) {
-        // context.document.showMessage("framework loading... " + root + "/Contents/Sketch" );
         log("don't have ArtboardPreviewController");
         var loaded = loadFramework("ArtboardPreview", "/Contents/Sketch");
         log("finish loading " + loaded);
@@ -29,13 +28,8 @@ var openWindow = function(context) {
      log("controller.string " + controller);
 
     var image = _bridge.imageFromSelection(context);
-    log("image: ", image);
-//    controller.launchWithImage(image);
-//    log("2");
-//
-//    context.document.showMessage("controller initalized");
+    controller.launchWithImage(image);
 
     log("3");
-//    NSThread.mainThread().threadDictionary().setObject_forKey_(controller, "artboardpreview" + NSDate.date());
-//    log("thraed: " +  NSThread.mainThread().threadDictionary().objectForKey("artboardpreview"));
+    NSThread.mainThread().threadDictionary().setObject_forKey_(controller, "artboardpreview" + NSDate.date());
 }
